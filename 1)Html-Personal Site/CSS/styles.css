@@ -1,0 +1,18 @@
+/* external css */
+body{
+  background-color:#C7F2A4;
+}
+hr{
+
+  border-style:dotted none none;  /* with border gone,height becomes zero */
+  width:5%;
+  border-width:5px;
+  border-color:grey;
+
+}
+h1{
+  color:#425F57;
+}
+h3{
+  color:#425F57;
+}

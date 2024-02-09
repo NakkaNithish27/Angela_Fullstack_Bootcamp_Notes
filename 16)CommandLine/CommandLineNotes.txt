@@ -1,0 +1,26 @@
+					HYPER TERMINAL(git,git bash,command line,terminal)
+We need to cinfigure hyper to use git bash.
+We use shells(GUI,Command Line) to interact with the kernal of the os.
+Bash shell is a Command Line Interpreter(CLI) for the UNIX system.	
+Commands that I learned			
+mkdir foldername
+ls 
+cd
+cd ~ (go back to root directory) 
+cd .. (go one level back)
+cd "C:\Users\nakka\Music\VideoProc Converter"
+ctrl A,ctrl E,ctrl U
+
+CREATING,OPENING,AND REMOVING FILES THROUGH THE COMMAND LINE
+touch filename.extension  //creates a file
+start filename.extension  //opens a file
+rm filename.extension	  //removes a file
+pwd                       //printing working directory
+rm *                      //removes all files in current folder
+//always check with directory you are in beforw doing any deleting commands.
+$ rm -r foldername  (-r is a flag)
+
+rm -rf .git //deletes the git repository leaving remaining files unthouched
+
+mv -f /path/subfolder/{.,}* /path/  //move all folders including hidden ones from one location to another
+//The above command can only moves files between two folders of same level
