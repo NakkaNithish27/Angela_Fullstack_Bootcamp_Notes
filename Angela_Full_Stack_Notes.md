@@ -1,5 +1,7 @@
 [HTML NOTES](#html-notes)
 
+[CSS NOTES](#css-notes)
+
 [Web Design](#web-design)
 
 [Javascript](#javascript)
@@ -102,7 +104,7 @@ yourMessage=hello nakka nithish    */
 
 
 
-##CSS NOTES
+## CSS NOTES
 - px is satic size,inorder to make our size dynamic %,rem are recommended */
 color: #66BFBF;
 - 100%=16px=1rem
