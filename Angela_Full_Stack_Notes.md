@@ -1,4 +1,4 @@
-// 1)HTML NOTES
+#1)HTML NOTES
 
 <!DOCTYPE html> ///* latest version of html ie., html5 */
 <meta charset="utf-8"> ///* extra data to browser,utf-8(encoding of unicode)includes all international languages&symbols */
