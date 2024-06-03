@@ -1092,8 +1092,9 @@ res.render("ejsfilename",{kindOfDay:value})
     <h1 style="color:blue"> Its a <%=kindOfDay%></h1>
     
 ```
-//4
-//PASSING DATA FROM YOUR WEBPAGE TO YOUR SERVER
+### 4
+### PASSING DATA FROM YOUR WEBPAGE TO YOUR SERVER
+```js
 //Search date format in js in chrome
 let today = new Date();
 let options={
@@ -1103,34 +1104,36 @@ let options={
   day: 'numeric'
 }
 let day=today.toLocaleDateString("en-US",options); //here locale is "en-US",it can be anything
+```
 
-//5
-//SCOPE
-//Scope of local variables is local,ie they can only be accessed inside that block only
-//But there is some pecularity in js
+### 5
+### SCOPE
+- Scope of local variables is local,ie they can only be accessed inside that block only
+- But there is some pecularity in js
 if(true){    //this if block considered as soft wall
   var x=2;   //this will have global scope
   console.log(x);
 }
 console.log(x); //is possible,cuz we declared x using var keyword,
-//So var will have global scope no matter where u declare it,this is only particular to js,it other programming lang var will behave normally
-//So try to avoid var,the code is more predictable that way
-//use let instead
+- So var will have global scope no matter where u declare it,this is only particular to js,it other programming lang var will behave normally
+- So try to avoid var,the code is more predictable that way
+- use let instead
 
-//6
-// ADDING PRE-MADE CSS STYLESHEETS TO YOUR WEBSITE
-//when we link to the stylesheet normally it will show this error in console
+#6
+# ADDING PRE-MADE CSS STYLESHEETS TO YOUR WEBSITE
+- when we link to the stylesheet normally it will show this error in console
 Refused to apply style from 'http://localhost:3000/css/styles.css'
-//Because our css/styles.css exits in the root of our project
-//When we use express,it doesnt automatically serve all of the project files,infact it only serve up the main access point which we define in our
-//package.json file as app.js and also the views folder,and ignores everything
-//so the browser cant simply goes to http://localhost:3000/css/styles.css ,cuz this is a dynamic website
-//In order to use any file by the browser,the server has to server it
-file:///D:/Web%20Development/8)Drum%20Kit%20Starting%20Files/styles.css /*We cant simply replace all of the endpoint with localhost:3000*/
-//We create a folder called public and put all the files that we want the server to serve in it
-//We need to tell the location of static files
-app.use(express.static("public"));
+- Because our css/styles.css exits in the root of our project
+- When we use express,it doesnt automatically serve all of the project files,infact it only serve up the main access point which we define in our
+- package.json file as app.js and also the views folder,and ignores everything
+- so the browser cant simply goes to http://localhost:3000/css/styles.css ,cuz this is a dynamic website
+- In order to use any file by the browser,the server has to server it
+`file:///D:/Web%20Development/8)Drum%20Kit%20Starting%20Files/styles.css` /*We cant simply replace all of the endpoint with localhost:3000*/
+- We create a folder called public and put all the files that we want the server to serve in it
+- We need to tell the location of static files
+`app.use(express.static("public"));`
 
+```css
 background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
 
 .item:last-child {
@@ -1146,6 +1149,7 @@ input:checked+p {
   color: grey;
   opacity: 1;
 }
+```
 
 ### 7
 ### Understanding Templating vs Layouts
