@@ -1,7 +1,9 @@
-// 1)HTML NOTES
+## HTML NOTES 
 
+```html
 <!DOCTYPE html> ///* latest version of html ie., html5 */
-<meta charset="utf-8"> ///* extra data to browser,utf-8(encoding of unicode)includes all international languages&symbols */
+
+<meta charset="utf-8"> /* extra data to browser,utf-8(encoding of unicode)includes all international languages&symbols */
 <title>Nithish's Personal Site</title> ///* title of the page */
 
 <style>
@@ -16,18 +18,20 @@ internal css
 <img src="Images/nithish-modified.png" alt="Nakka Nithish profile picture"></td>
 ///* alt text helps for search engine optimization & ranking of website */
 
+```
 
+```html
 <table cellspacing='12'>
-//  /* cellspacing defines space b/n two cells */
+  /* cellspacing defines space b/n two cells */
   <thead>
-    ///* head row of the table */
-    <th>Year of Study</th> ///* th means table head cell */
+    /* head row of the table */
+    <th>Year of Study</th> /* th means table head cell */
     <th>Institution</th>
     <th>Course</th>
     <th>Score</th>
   </thead>
   <tbody>
-    ///* creating head and body separately helps us to target & style them with individually with CSS */
+    /* creating head and body separately helps us to target & style them with individually with CSS */
     <tr>
       /* tr means table row */
       <td>July 2021 - December 2023</td> ///* td means table data cell */
@@ -38,12 +42,17 @@ internal css
 
   </tbody>
 </table>
-border-style:dotted none none;  // with border gone,height becomes zero
-///*  using html to control the layout is not a good idea */
-///* tables can have thead,tbody,tfoot, most of table attributes are deprecated */
-&#160;   space html entity
-</a><a href="contact-me.html">Contact Me</a></h3> ///* linking to other insite pages*/
+```
+- `border-style:dotted none none;`  // with border gone,height becomes zero
 
+- using html to control the layout is not a good idea 
+- tables can have thead,tbody,tfoot, most of table attributes are deprecated 
+
+`&#160;`   space html entity
+
+` </a><a href="contact-me.html">Contact Me</a></h3> /* linking to other insite pages*/`
+
+```html
 <form action="mailto:nithishroyal234@gmail.com" method="post" enctype="text/plain" >  /* it opens the mail client,
     method='post' means it makes a post req and autofills the user entered data into mail body,
   enctype='text/plain' means the data entered in the form is encoded in plain text*/
@@ -61,135 +70,158 @@ yourMessage=hello nakka nithish    */
   <br><input type="submit" name="" >  /*  */
 </form>
 
+```
 
 
 
-// 2)CSS NOTES
-/* px is satic size,inorder to make our size dynamic %,rem are recommended */
+##CSS NOTES
+- px is satic size,inorder to make our size dynamic %,rem are recommended */
 color: #66BFBF;
-//100%=16px=1rem
-/********* display:block,inline,inline-block,none************ */
-/* block,blocks other elements from sitting beside it,width can be changed */
-/* inline-stacks beside each other,width cant be changed ,no content no width and height*/
-/* inline-block,best of both worlds */
-/* two ways can hide an element,1)display:none,2)visibility:hidden*/
-/* content is everything */
-/* order comes from code */
-/* children sit on top of parents,leads to concept of z-index; */
-/* div(block element) and span(inline element) elements are just boxes with no styling */
+- 100%=16px=1rem
 
-/* ********position:static,relative,absolute,fixed************* */
-/* static,default html flow */
-/* relative positioning- the elements gets positioned with respect to its previous position,
+### display:block,inline,inline-block,none
+- block,blocks other elements from sitting beside it,width can be changed */
+- inline-stacks beside each other,width cant be changed ,no content no width and height*/
+- inline-block,best of both worlds */
+- two ways can hide an element,1)display:none,2)visibility:hidden*/-* content is everything */
+- order comes from code */
+- children sit on top of parents,leads to concept of z-index; */
+- div(block element) and span(inline element) elements are just boxes with no styling */
+
+### position:static,relative,absolute,fixed
+
+-  static,default html flow 
+-  relative positioning- the elements gets positioned with respect to its previous position,
 *it moves by lefting the ghost of itself behind.
-*absolute positioning- the elements gets positioned with respect to the entire body/its parent.
- */
-/*To convert into rem,divide px by 16*/
-/*To convert into %,divide px by 16 and multiply with 100*/
-/*use rem instead of em*/
-/*float:left, makes that image float left and the test wraps around it,use float only when you want text wrap aroud a certain element*/
-/*clear:left,takes care that nothing present in its left*/
+- absolute positioning- the elements gets positioned with respect to the entire body/its parent.
+ 
+- To convert into rem,divide px by 16*/
+- To convert into %,divide px by 16 and multiply with 100
+- use rem instead of em
+- float:left, makes that image float left and the test wraps around it,use float only when you want text wrap aroud a certain element
+- clear:left,takes care that nothing present in its left
 
 
-//3)Tindog project using Bootstrap
+## Tindog project using Bootstrap
 
-/* Three ways to add bootstrap,1)add bootstrap cdn link,2)use starter template,3)download bootsrap.css and link to it manually */
-/* Start by looking at other people websites,www.awwwards.com,ui-patterns.com */
-/* wire frame(sneakpeekit.com,balsamiq),mock up  */
-/* prototypes,www.dribble.com */
-/* everything is just a box,adding classes changes the look of the box. Copy code and customize it to your need*/
-/* can add script tag just above </body>  */
-/* bootstrap  can easily implement grid usig class='col' div inside class='row' div.
-    can make layout responsive,ex:col-lg-3,in remaing screens it takes all 12 units. */
-/* link your css just after bootstrap css to overwrite bootstrap styles */
-/* add padding in % so it changes dynamically */
-/* To use font awesome icons we need to include font awesome script ,font awesome icons comes with different sizes*/
-/* default z-index is 0.It can be -,+ and 0 ,
+-  Three ways to add bootstrap,1)add bootstrap cdn link,2)use starter template,3)download bootsrap.css and link to it manually 
+-  Start by looking at other people websites,www.awwwards.com,ui-patterns.com 
+-  wire frame(sneakpeekit.com,balsamiq),mock up  
+-  prototypes,www.dribble.com 
+-  everything is just a box,adding classes changes the look of the box. Copy code and customize it to your need
+-  can add script tag just above </body>  
+-  bootstrap  can easily implement grid usig class='col' div inside class='row' div.
+    can make layout responsive,ex:col-lg-3,in remaing screens it takes all 12 units. 
+-  link your css just after bootstrap css to overwrite bootstrap styles 
+-  add padding in % so it changes dynamically 
+-  To use font awesome icons we need to include font awesome script ,font awesome icons comes with different sizes
+-  default z-index is 0.It can be -,+ and 0 ,
 z-index works only if it is absolute/relative positioning,
-absolute takes out of the html flow,relative keeps the flow*/
-/* media queries
+absolute takes out of the html flow,relative keeps the flow
+-  media queries
 the css activates only when the conditions are true
- */
-/* Code Readability
-Readability,Modularity,Efficiency,Length */
-/* always try to give custom classes
+ 
+-  **Code Readability**
+Readability,Modularity,Efficiency,Length 
+-  always try to give custom classes
 you can use advanced css selectors(can combine different css selectors)
-try to use combinations,instead of adding new classes */
-/* try to find repetive patterns,like white text on coloured background and coloured text on white background  */
-/* use id's very sparringly,only use it on sections for navigation purposes,to target them in hrefs */
-/* dont use inline styles, Readability is more important than shortening the code */
-/* Web Design */
-/* COLOR THEORY
-Differnet colors have different moods,choose wisely.
-We use color palates,
+try to use combinations,instead of adding new classes 
+-  try to find repetive patterns,like white text on coloured background and coloured text on white background  
+-  use id's very sparringly,only use it on sections for navigation purposes,to target them in hrefs 
+-  dont use inline styles, Readability is more important than shortening the code */
+
+### Web Design 
+-  COLOR THEORY
+
+- Differnet colors have different moods,choose wisely.
+- We use color palates,
 colour wheel
 adobe colors
 colorhunt.co */
-/* TYPOGRAPHY
-serif family type face(has little feet,looks serious)
-San-serif (no feet,more readable)
-Try to combine two fonts that have same mood.
-*/
-/* USER INTERFACE DESIGN
-try to highlight the important things with the design using hierarchy.
-In ui design 40 to 60 characters per line is good.
-Reduce the number of alignment lines.
-White space is also important.
-Design the ui for the audience.
- */
-/* UX
-1)Keep the design simple
-2)Keep the design consistent through
-3)Keep reading patterns in mind while designing(try to use F/Z pattern)
-4)All platform design,make sure our website rearranges itself on differnt screens
-5)Test by giving to other users*/
-/*Daily UI website for 100 days.
+### TYPOGRAPHY
+- serif family type face(has little feet,looks serious)
+- San-serif (no feet,more readable)
+- Try to combine two fonts that have same mood.
+
+### USER INTERFACE DESIGN
+- try to highlight the important things with the design using hierarchy.
+- In ui design 40 to 60 characters per line is good.
+- Reduce the number of alignment lines.
+- White space is also important.
+- Design the ui for the audience.
+ 
+### UX
+- Keep the design simple
+- Keep the design consistent through
+- Keep reading patterns in mind while designing(try to use F/Z pattern)
+- All platform design,make sure our website rearranges itself on differnt screens
+- Test by giving to other users
+- Daily UI website for 100 days.
 Collect UI website.
 Canva.com(online graphics editing program).
- */
+ 
 
-//4)Bootstrap installation
+## Bootstrap installation
 
-//5)Javascript
-//github/idiomatic.js(Principles of writing consistent,idiomatic javascript)
-//var is function scoped and let is block scoped,let does not allow to redeclare variables,var allows to redeclare variables.
-//ctrl+L or console.clear(), clears the console.
-//post increment,pre increment
-//select text and press ctrl+F then press A to B
-//alert() is for users but console.log is meant for develovers to debug.
-//parseInt(),Math.floor(),Math.round()
-//DRY-Do Not Repeat Yourself
+## Javascript
+
+- github/idiomatic.js(Principles of writing consistent,idiomatic javascript)
+- var is function scoped and let is block scoped,let does not allow to redeclare variables,var allows to redeclare variables.
+- ctrl+L or console.clear(), clears the console.
+- post increment,pre increment
+- select text and press ctrl+F then press A to B
+- `alert()` is for users but console.log is meant for develovers to debug.
+- `parseInt(),Math.floor(),Math.round()`
+- DRY-Do Not Repeat Yourself
 
 
-//6)DOM
-//1
-/*Just like css, we have inline javascript(js as a value to html attribute)*/ ex:onload="alert('Hello')",
-// internal javascript(using script tag just like style tag)
-<script type="text/javascript">
+## DOM
+### 1
+
+- Just like css, we have inline javascript(js as a value to html attribute)*/ ex:onload="alert('Hello')",
+-  internal javascript(using script tag just like style tag)
+`<script type="text/javascript">
   alert("Nithish");
-</script>,
-// external javascript using script tag with src
-<script src="index.js" charset="utf-8"></script>
-// *internal js>external js>inline js(specificity from what I observed)
-// *CSS should load before any content,thats why we put it just after title.
-// *Js should load after all the html elements loaded, thats why it is placed at the end just before </body>.
+</script>`
+
+-  external javascript using script tag with src
+`<script src="index.js" charset="utf-8"></script>`
+-  *internal js>external js>inline js(specificity from what I observed)
+-  *CSS should load before any content,thats why we put it just after title.
+- *Js should load after all the html elements loaded, thats why it is placed at the end just before </body>.
 document.querySelector("h1").innerHTML=""
-// html elements are the actors that listen to javascript.
-//2
-//Document Object Model(DOM)
+-  html elements are the actors that listen to javascript.
+
+### 2
+#### Document Object Model(DOM)
+
+```js
 document.firstElementChild //is the html element
+
 document.firstElementChild.firstElementChild //is <head>​…​</head>​
+
 document.firstElementChild.lastElementChild //is <body></body>
-var heading=document.firstElementChild.lastElementChild.firstElementChild;
+
+var heading=document.firstElementChild.
+
+lastElementChild.firstElementChild;
+
 heading.innerHTML="Nakka Nithish"
+
 document.querySelector("input").click() //clicks the checkbox
 //objects in DOM has properties and methods
 ex:car.color,car.speed
 ex:car.drive(),car.break()
+
 document.querySelector("ul").lastElementChild.innerHTML="Nakka Nithish"
 
-//3
-//Selecting html elements with javascript
+```
+
+### 3
+
+#### Selecting html elements with javascript
+
+```js
 document.getElementsByTagName("li") //returns an array of list elements
 document.getElementsByTagName("li")[2].style.color="purple"
 document.getElementsByClassName("btn")
@@ -203,55 +235,78 @@ document.querySelector("li a")  //hierarchical Selector
 document.querySelector("ul .list") //gives only first list element
 document.querySelectorAll("ul .list")
 
-//4
-//Changing styles of html elements with javascript
-//After selecting an element with js use .style.fontSize,.style.backgroundColor etc.,
-// The main difference b/n css properties and js objecrt properties are
-//js follows camel casing unlike actual css properties
-//the value is represented as a string in js.
+```
+
+### 4
+#### Changing styles of html elements with javascript
+
+- After selecting an element with js use .style.fontSize,.style.backgroundColor etc.,
+-  The main difference b/n css properties and js objecrt properties are
+- js follows camel casing unlike actual css properties
+- the value is represented as a string in js.
 document.querySelector(".btn").style.backgroundColor="yellow"
 
-//5
-//keeping styles inside css file but toggling it on and off inside js file
-//classList is a property of every DOM object
+### 5
+
+- keeping styles inside css file but toggling it on and off inside js file
+- classList is a property of every DOM object
+
+```js
 document.querySelector("button").classList.add("invisible");  /*in this way we can keep all the styles in css file but we can
 toggle it on and off by adding and removing classes to classList of that particular element by using js*/
+```
+```js
 document.querySelector("button").classList.remove("invisible");
 document.querySelector("button").classList.toggle("invisible"); //add and removes the class
-//in css file we only focus on look and in js file we only focus on behaviour
+```
+- in css file we only focus on look and in js file we only focus on behaviour
 
-//6
-//TEXT MANUPULATION USING JS
+
+### 6
+
+#### TEXT MANUPULATION USING JS
+
+```js
 document.querySelector("h1").innerHTML="<em>Hello</em>" //innerHTML gives and takes all the html code inside main tags
 document.querySelector("h1").textContent="Nakka Nithish" //textContent only gives and takes the text and not html code
+```
 
-//7
-//MANUPULATING HTML ATTRIBUTES OF ANY ELEMENT USING JS
+### 7
+#### MANUPULATING HTML ATTRIBUTES OF ANY ELEMENT USING JS
+
+```js
 document.querySelector("a").attributes //gives list of all attributes
 document.querySelector("a").getAttribute("href")
 document.querySelector("a").setAttribute("href","https://www.bing.com")
+```
 
-//7)Dice game
-//name the images as your convinience
-//random number and image name are linked,so the image src change based on the random number,thus changing image
-//we compare the two random numbers to find the winner
+### 7)Dice game
+
+- name the images as your convinience
+- random number and image name are linked,so the image src change based on the random number,thus changing image
+- we compare the two random numbers to find the winner
 
 .w {
 background-image: url("images/tom1.png");
 }
 
-//8)Drum Kit project
+### 8)Drum Kit project
 
-//1
-//ADDING EVENT LISTERS TO A BUTTON
-//addEventListener(,) takes event type and a lister like a function name as parameters.
-// we can also use anonymous fuc or arrow functions rather than passing fun name.
-//we can use loops to add event listeners to all elements with a class using i<querySelectorAll('query').length
+#### 1
 
-//2
-//HIGHER ORDER FUNCTIONS AND PASSING FUNCTIONS AS ARGUMENTS
-//How addEventListener function works
-//example
+#### ADDING EVENT LISTERS TO A BUTTON
+
+- addEventListener(,) takes event type and a lister like a function name as parameters.
+-  we can also use anonymous fuc or arrow functions rather than passing fun name.
+- we can use loops to add event listeners to all elements with a class using i<querySelectorAll('query').length
+
+### 2
+### HIGHER ORDER FUNCTIONS AND PASSING FUNCTIONS AS ARGUMENTS
+
+- How addEventListener function works
+- example
+
+```js
 function add(num1,num2){
   return num1+num2;
 }
@@ -261,20 +316,27 @@ function multiply(num1,num2){
 function calculator(num1,num2,operator){ //passing fun name as parameter
   return operator(num1,num2);     //calling fun
 }
-//debugger;
-//functionname(,);       enters debugger mode,then click downarrow to see through steps
+```
 
-//3
-//HOW TO PLAY SOUNDS ON A WEBSITE
+- debugger;
+- functionname(,);       enters debugger mode,then click downarrow to see through steps
+
+### 3
+### HOW TO PLAY SOUNDS ON A WEBSITE
+
+```js
 HtmlMediaElement.play()
 ex:
 var audio=new Audio("sounds/tom-1.mp3"); //create an object passing audio file
 audio.play();
 background-image: url("images/tom1.png");
 //this, is the current object/html element that is clicked.
+```
 
-//4
-//A DEEPER UNDERSTANDING OF JAVASCRIPT OBJECTS
+### 4
+### A DEEPER UNDERSTANDING OF JAVASCRIPT OBJECTS
+
+```js
 var houseKeeper1={
   yearsOfExperience:12,
   name:"Jane",
@@ -292,25 +354,33 @@ function HouseKeeper(yearsOfExperience,name,cleaningDuty) {
 }
 var houseKeeper2=new HouseKeeper(6,"Jhanu",["Lobby"]);
 
-//5
-//SWITCH STATEMENT IN JAVASCRIPT
-//instead of using if else we can use switch
-//in defalut console.log(expression) so it will be useful in future
+```
 
-//6
-//OBJECTS METHODS AND THEIR DOT NOTATION
-//object.method();
+### 5
+### SWITCH STATEMENT IN JAVASCRIPT
 
-//7
-//ADDING KEYBOARD EVENT LISTERS TO DETECT KEYPRESSES
+- instead of using if else we can use switch
+- in defalut console.log(expression) so it will be useful in future
+
+- 6
+- OBJECTS METHODS AND THEIR DOT NOTATION
+`object.method();`
+
+### 7
+### ADDING KEYBOARD EVENT LISTERS TO DETECT KEYPRESSES
+
+```js 
 addEventListener("keydown",function(event){}) //event is what that triggers the function like which key is pressed,it has many properties we can access,
 //event.key is one of them which tells the key that is pressed
+```
 
-//8
-//UNDERSTANDING CALLBACKS AND HOW TO RESPOND TO addEventListener
+### 8
+### UNDERSTANDING CALLBACKS AND HOW TO RESPOND TO addEventListener
+
 addEventListener(type,function(event){}) can also takes functions with parameters which are called callback functions.
 
 example:
+```js
 function anotherAddEventListener(typeOfEvent,callback){
     //detect event code
     let eventThatHappened={
@@ -327,42 +397,58 @@ anotherAddEventListener(typeOfEvent,callback(event){
   console.log(event);
 }) //just clear that we can use the object of the event that happened
 
-//9
-//ADDING ANIMATION TO WEBSITES
-//we can easily add animations that works when we click by creating a style in css file,and simply adding that class
-//by classList.add("") and removing it by classList.remove("") using a setTimeout function after some milliseconds
+```
+
+### 9
+### ADDING ANIMATION TO WEBSITES
+
+- we can easily add animations that works when we click by creating a style in css file,and simply adding that class
+- by classList.add("") and removing it by classList.remove("") using a setTimeout function after some milliseconds
+```js
 setTimeout(function(){
   activeButton.classList.remove("pressed");
 },100);   //calls the function after 100 milliseconds
+```
 
 
-//9)jQuery
-//1
-//javascript library,reduces the javascript code
+### 9)jQuery
+### 1
+
+- javascript library,reduces the javascript code
+```js
 document.querySelector("h1") /*can simply written as*/ jQuery("h1") or $("h1")
+```
 
-//2
-//HOW TO INCORPORATE jQuery INTO WEBSITES
-//by adding CDN from official jQuery website(google cdn is reccomended cuz of its popularity)
-//jQuery cdn must be placed above js script tag,other wise wont work
-//if we put both script tags inside head then we need to write
+### 2
+### HOW TO INCORPORATE jQuery INTO WEBSITES
+- by adding CDN from official jQuery website(google cdn is reccomended cuz of its popularity)
+- jQuery cdn must be placed above js script tag,other wise wont work
+- if we put both script tags inside head then we need to write
+```js
 $(document).ready(function() {
   $("h1").css("color", "red");
 });
+```
 
-//3
-//HOW MINIFICATION WORKS TO REDUCE FILE SIZE
-//www.minifier.org
-//it removes all the comments and spaced from our code to minify it.
-//minified files extension is like .min.js , .min.css like that.
+### 3
+### HOW MINIFICATION WORKS TO REDUCE FILE SIZE
 
-//4
-//SELECTING ELEMENTS WITH JQUERY
+- www.minifier.org
+- it removes all the comments and spaced from our code to minify it.
+- minified files extension is like .min.js , .min.css like that.
+
+### 4
+### SELECTING ELEMENTS WITH JQUERY
+
+```js 
 $("h1") or jQuery("h1") //  document.querySelector("h1")
 $("button"); //  document.querySelectorAll("h1")
+```
 
-//5
-//MANUPULATING STYLES WITH jQuery
+### 5
+### MANUPULATING STYLES WITH jQuery
+
+```js
 $("h1").css("color") //single value means getting the value
 rgb(255, 0, 0)
 $("h1").css("font-size");
@@ -372,20 +458,28 @@ $("h1").css("color", "red"); //double value means setting the value
 $("h1").addClass("big-title"); //adding a class
 $("h1").removeClass("big-title");
 $("h1").hasClass("big-title");
+```
 
-//6
-//MANUPULATING TEXT WITH jquery
+### 6
+### MANUPULATING TEXT WITH jquery
+
+```js
 $("h1").text("Nakka"); // equal to .textContent  //adding text
 $("h1").html("<em><strong>Nakka</strong><em>"); // equal to .innerHtml     //adding html
+```
 
-//7
-//MANUPULATING ATTRIBUTES WITH jquery
+### 7
+### MANUPULATING ATTRIBUTES WITH jquery
+
+```js
 $("img").attr("src") //getting the value of attribute
 $("a").attr("href", "https://www.yahoo.com") //setting the value of attribute
+```
 
-//8
-//ADDING EVENT LISTENERS WITH jQuery
+### 8
+### ADDING EVENT LISTENERS WITH jQuery
 
+```js
 for (var i = 0; i < 5; i++) {
   document.querySelectorAll("button")[i].addEventListener("click", function() {
     document.querySelector("h1").style.color = "purple";
@@ -407,6 +501,7 @@ $(document).keydown(function(event) { //document dont need double codes
 $(document).on("keydown", function(event) { //Even more flexible way of adding eventlistener using on()
   $("h1").text(event.key + " ")
 })
+```
 
 //9
 //ADDING AND REMOVING ELEMENTS WITH jQuery
@@ -2145,49 +2240,54 @@ app.get("/secrets",function(req,res){
 });
 
 
-//REACT JS NOTES
-//1
-//React is javascript library for building user interfaces,its a frondend framework
-//Here we create components,we can customize these components with different pieces of data
-//React combines small amounts of html,css,js into a single component
-//This is what makes the twitter website to load the feed screen without the rest of the page visibly updating
-/*In olden days we had to refresh the web page to see any changes,but these days we have each component listening for changes in
-the server and updating itself and its own appereance and data and being able to talk to the server independently*/
-/*For ex if there is any new comment on a fb post,the post can update itself without effecting the rest of the website*/
-/*React is able to re-render these changes really efficiently and it does this by comparing changes,what we call diffing*/
-/*Whenever a change happens it compares the new version of the DOM tree that u want to be rendered with the old the version thats
-already showing up,and it re-renders the only sub component that has changes*/
+### REACT JS NOTES
+### 1
+- React is javascript library for building user interfaces,its a frondend framework
+- Here we create components,we can customize these components with different pieces of data
+- React combines small amounts of html,css,js into a single component
+- This is what makes the twitter website to load the feed screen without the rest of the page visibly updating
+- In olden days we had to refresh the web page to see any changes,but these days we have each component listening for changes in
+the server and updating itself and its own appereance and data and being able to talk to the server independently
+- For ex if there is any new comment on a fb post,the post can update itself without effecting the rest of the website
+- React is able to re-render these changes really efficiently and it does this by comparing changes,what we call diffing
+- Whenever a change happens it compares the new version of the DOM tree that u want to be rendered with the old the version thats
+already showing up,and it re-renders the only sub component that has changes
 
 
-//2
-//Introduction to the code sandbox(browser based development enviroment),It allows u to build and deploy within the same application
+### 2
+- Introduction to the code sandbox(browser based development enviroment),It allows u to build and deploy within the same application
 
-//3
-//Introduction to JSX and Babel
-/*In index.html file,by convention we always create a div with id=root,which is the root of our react application,
+### 3
+
+#### Introduction to JSX and Babel
+- In index.html file,by convention we always create a div with id=root,which is the root of our react application,
 everything we have create using react will be inserted inside this div*/
-/*Just above the </body> we will have a script src tag that links to the index.js file*/
-/*Infact we never touch this index.html file ever again*/
-/*We write all our code in index.js file*/
-//install react,react-dom dependencies
-//require them
+- Just above the `</body>` we will have a script src tag that links to the index.js file*/
+- Infact we never touch this index.html file ever again*/
+- We write all our code in index.js file*/
+- install react,react-dom dependencies
+- require them
+```jsx
 var React=require('react');
 var ReactDOM=require('react-dom');
-//ReactDOM.render(what to show,where to show,callback fun to tell us when that render fun has completed);
+ReactDOM.render(what to show,where to show,callback fun to tell us when that render fun has completed);
 ReactDOM.render(<h1>Hello World</h1>,document.getElementById('root'));
+```
 
-/*Here we are able to write plain html inside a js file,hows this possible?,this is what JSX does,react works by creating these
+- Here we are able to write plain html inside a js file,hows this possible?,this is what JSX does,react works by creating these
 jsx files,files where we have got html right in the body of js file*/
-/*In behind the scenes our html picked by a compiler and is compiled down to actual javascript,and the compiler comes from the
+- In behind the scenes our html picked by a compiler and is compiled down to actual javascript,and the compiler comes from the
 react dependency we have required*/
-/*Inside the react module there is something called Babel*/
-/*Babel is js compiler,its converts next gen js like ES 6,7,8 and compile it down to a version that every browser can understand*/
-/*And this incules compiling jsx into plain old js even internet explorer can understand*/
+- Inside the react module there is something called Babel*/
+- Babel is js compiler,its converts next gen js like ES 6,7,8 and compile it down to a version that every browser can understand*/
+- And this incules compiling jsx into plain old js even internet explorer can understand*/
 var h1=document.createElement("h1");
 h1.innerHTML="Hello World";
 document.getElementById("root").appendChild(h1);
 
-/*import keyword is one of the latest features of js as part of ES6*/
+- import keyword is one of the latest features of js as part of ES6*/
+
+```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
 ReactDOM.render(
@@ -2198,9 +2298,12 @@ ReactDOM.render(
   document.getElementById("root")
 );
 
+```
 
-//4
-//JSX code practice
+### 4
+### JSX code practice
+
+```jsx
 ReactDOM.render(
   <div>
     <h1>My Favourite Foods</h1>
@@ -2212,11 +2315,14 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+```
 
-//5
-//Javascript Expressions in JSX and ES6 template literals
-/*JSX not only allows u to use html inside js but it also allows to to use js inside html*/
-/*u just need enclose that js variable inside a curly braces*/
+### 5
+### Javascript Expressions in JSX and ES6 template literals
+
+- JSX not only allows u to use html inside js but it also allows to to use js inside html*/
+- u just need enclose that js variable inside a curly braces*/
+```jsx
 let name = "Nakka Nithish";
 let luckyNum = 7;
 
@@ -2227,18 +2333,24 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
-/*Not only js variables,u can add any js expression inside this curly brace*/
-//ex:3+5,Math.floor(Math.random()*10)
-//u cant write js statements inside {}
+```
+- Not only js variables,u can add any js expression inside this curly brace*/
+- ex:3+5,Math.floor(Math.random()*10)
+- u cant write js statements inside {}
 ex:if(){return 7}else if(){return 12}
-/*An expression will be evaluated to a value,but statement is like asking computer to do some work*/
+- An expression will be evaluated to a value,but statement is like asking computer to do some work*/
+
+    ```jsx
     <h1>Hello {fName + " " + lName}!</h1>
     <h1>Hello {fName} {lName}!</h1>
     <h1>Hello {`${fName} ${lName}`}!</h1>
+    ```
 
 
-//6
-//Js expressions in JSX practice
+### 6
+### Js expressions in JSX practice
+
+```jsx
 let name = "Nakka Nithish";
 let date = new Date();
 let year = date.getFullYear();
@@ -2249,18 +2361,20 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+```
 
 
-//7
-//JSX Attributes and Styling React Elements
-/*The html we use inside JSX file is actually converted into js,so we should use js properties as its attributes
+### 7
+### JSX Attributes and Styling React Element- 
+- The html we use inside JSX file is actually converted into js,so we should use js properties as its attributes
 instead of html attributes,remember that js properties  are in camelcasing
-ex:className="heading" instead of class="heading"
-   contentEditable="true"*/
-//html global attributes are attributes that we can use on any html element
+ex:`className="heading"` instead of `class="heading"`
+   `contentEditable="true`"*/
+- html global attributes are attributes that we can use on any html element
 <script src="../src/index.js" type="text/JSX"></script>
 
-//We can get random images form lorem picsum
+- We can get random images form lorem picsum
+```jsx
 let img = "https://picsum.photos/200";
 ReactDOM.render(
   <div>
@@ -2271,14 +2385,18 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+```
 
 
-//8
-//Inline styling for React Elements
+### 8
+### Inline styling for React Elements
+
 In html the inline styling style="color:red",here the style attribute taking a string value
-/*But in jsx the html code we are writing is not actually html,so for inline style we should assign a js object to
+- But in jsx the html code we are writing is not actually html,so for inline style we should assign a js object to
 style attribute*/
-//since the value of style is a js object we should enclose it in {}
+- since the value of style is a js object we should enclose it in {}
+
+```jsx
 ReactDOM.render(<h1 style={{color:"red"}}>Hello World!</h1>, document.getElementById("root"));
 
 let customStyle = {
@@ -2291,10 +2409,13 @@ ReactDOM.render(
   <h1 style={customStyle}>Hello World!</h1>,
   document.getElementById("root")
 );
+```
 
 
-//9
-//React Styling Practice
+### 9
+### React Styling Practice
+
+```jsx
 let date = new Date(2023, 1, 1, 19);
 let time = date.getHours();
 let customStyle = {
@@ -2318,16 +2439,18 @@ ReactDOM.render(
   </h1>,
   document.getElementById("root")
 );
+```
 
 
-//10
-//React Components
-/*Split website into smaller components*/
-/*Its React convention to give ur components a name that is in pascal case(first letter is captilized),and this allows to
+### 10
+### React Components
+- Split website into smaller components*/
+- Its React convention to give ur components a name that is in pascal case(first letter is captilized),and this allows to
 differentiate between custom components that were building vs the html elements*/
-/*Create a heading component as a separate file in src folder Heading.jsx*/
+- Create a heading component as a separate file in src folder Heading.jsx*/
 
-//In Heading.jsx file
+- In Heading.jsx file
+```jsx
 import React from "react";
 function Heading() {
   return <h1>My Favourite Foods</h1>;
@@ -2348,8 +2471,11 @@ function List() {
 }
 
 export default List;
+```
 
-//In index.js file
+- In index.js file
+
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 import Heading from "./Heading";
@@ -2363,20 +2489,24 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+```
 
-/*Normally in index.js files of a lot of React apps we dont have any html elements, we just have a custom component called
-<App/>*/
+- Normally in index.js files of a lot of React apps we dont have any html elements, we just have a custom component called
+`<App/>`
 
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 ReactDOM.render(<App />, document.getElementById("root"));
+```
 
-/*Normally in react apps we will have a lot of components,so lets create a components folder inside src folder*/
-/*We can even create subfolders ex:login screen components,register screen components etc*/
+- Normally in react apps we will have a lot of components,so lets create a components folder inside src folder*/
+- We can even create subfolders ex:login screen components,register screen components etc*/
 
-//11
-//Reacts Components practice
+### 11
+### Reacts Components practice
+```jsx
 function Heading() {
   const date = new Date();
   const currentTime = date.getHours();
@@ -2407,10 +2537,14 @@ function Heading() {
 function App() {
   return <Heading />;
 } //The app component returns only components
+```
 
-//12
-/*Javascript ES6-Import,Export and Modules*/
-math.js module
+### 12
+### Javascript ES6-Import,Export and Modules*/
+
+- math.js module
+
+```jsx
 let pi = 3.1415962;
 function doublePi() {
   return pi * 2;
@@ -2419,10 +2553,14 @@ function triplePi() {
   return pi * 3;
 }
 export default pi;  //We can have only one default export per module and it can be imported by any name
+```
+```jsx
 export { doublePi, triplePi }; /*We can export anything as a js object as a non default export and they must be imported
 with the same name*/
+```
 
-index.js module
+- index.js module
+```jsx
 import React from "react";
 import ReactDOM from "react-dom";
 import Pi, { doublePi, triplePi } from "./math.js";
@@ -2438,46 +2576,60 @@ ReactDOM.render(
   </ul>,
   document.getElementById("root")
 );
+```
 
+```jsx
 var React =require("react"); //this require() fun comes from nodejs and not from js
 import React from "react"; //import,export comes from EcmaScript6(ES6)
+```
 
-/*The browser penetration of ES6 is like 80% at the moment,here we using ES6 everywhere in our app only because
+- The browser penetration of ES6 is like 80% at the moment,here we using ES6 everywhere in our app only because
 we are using Babel*/
-/*We can also import using the wild card astrix(*)*/
+- We can also import using the wild card astrix(*)*/
+```jsx
 import * as pi from "./math.js";
 console.log(pi);
 {doublePi: ƒ doublePi(), triplePi: ƒ triplePi(), default: 3.1415962}
-
-/*We can use the imports as*/
+```
+- We can use the imports as*/
+    ```jsx
     <li>{pi.default}</li>
     <li>{pi.doublePi()}</li>
     <li>{pi.triplePi()}</li>
-/*But the wildcard import is discouraged in many style guides,because we lose the benefit of using single default export,and
+    ```
+- But the wildcard import is discouraged in many style guides,because we lose the benefit of using single default export,and
 our code will be also unclear*/
 
 
-//13
-/*4 steps for creating react app*/
-//1)Check node is up to date
-//2)Install vs>vscode-language-babel extension
-//3)Create React App
+### 13
+### 4 steps for creating react app*/
+- 1)Check node is up to date
+- 2)Install vs>vscode-language-babel extension
+- 3)Create React App
 npx create-react-app my-app
-//4)Run App
-cd my-app
-npm start
+- 4)Run App
 
-/*react-scrips are the scripts which are required to make the react app run locally*/
+  cd my-app
+
+  npm start
+
+- react-scrips are the scripts which are required to make the react app run locally*/
 
 
-//14
-//React Props
-/*We have already passing custom pieces of information to html elements via attributes*/
-ex:    <input id="fName" placeholder="Enter your first name" value="Nakka" />
+### 14
+### React Props
+
+- We have already passing custom pieces of information to html elements via attributes*/
+ex:    
+```jsx
+<input id="fName" placeholder="Enter your first name" value="Nakka" />
     	var input=document.getElementById("fName");
 	input.id,input.placeholder
-/*these attributes of html elements are predefined*/
-/*Since react components are like userdefined/custom html elements ,we can have custom attributes*/
+  
+```
+- these attributes of html elements are predefined*/
+- Since react components are like userdefined/custom html elements ,we can have custom attributes*/
+```jsx
 function Card(props) {
   return (
     <div>
@@ -2496,23 +2648,27 @@ function Card(props) {
       tel="+987 654 321"
       email="jack@nowhere.com"
     />
+    
+```
 
-/*forEach() method wont returns anything,map() method returns an array of elements*/
+- forEach() method wont returns anything,map() method returns an array of elements*/
 
 
-//15
-//React DevTools
-/*While passing props from one component to another componet,we can see the props of a particular component in React dev tools*/
-//Download React developer tools extension from chrome web store
-//Pass props from high level to low level
+### 15
+### React DevTools
+- While passing props from one component to another componet,we can see the props of a particular component in React dev tools*/
+- Download React developer tools extension from chrome web store
+- Pass props from high level to low level
 
-/*We just need the component and its necessery props(Which we can see in react devtools) to render it anywhere*/
+- We just need the component and its necessery props(Which we can see in react devtools) to render it anywhere*/
 
-//16
-//Mapping Data to Components
-/*For every single component that is rendered using a loop such as the map() fun,we will have to give those components a property
+### 16
+### Mapping Data to Components
+
+- For every single component that is rendered using a loop such as the map() fun,we will have to give those components a property
 called key and its value should be unique among all the other similar components*/
-/*This key prop is necessary to render components in order and we cant use this as props.key*/
+- This key prop is necessary to render components in order and we cant use this as props.key*/
+```jsx
 function createCard(contact) {
   return (
     <Card
@@ -2537,23 +2693,25 @@ function App() {
   <dt></dt>  //description term
   <dd></dd>  //description detail
 </dl>
+```
 
 
-//17
-/*js E56 map,filter,reduce,find,findIndex*/
-/*These are some fun that help us deal with arrays*/
-//Map -Create a new array by doing something with each item in an array.
+### 17
+### js E56 map,filter,reduce,find,findIndex*/
+- These are some fun that help us deal with arrays*/
+- Map -Create a new array by doing something with each item in an array.
 
-//Filter - Create a new array by keeping the items that return true.
+- Filter - Create a new array by keeping the items that return true.
 
-//Reduce - Accumulate a value by doing something to each item in an array.
+- Reduce - Accumulate a value by doing something to each item in an array.
 
-//Find - find the first item that matches from an array,and the loop stops as soon as it finds that item
+- Find - find the first item that matches from an array,and the loop stops as soon as it finds that item
 
-//FindIndex - find the index of the first item that matches,and the loop stops
+- FindIndex - find the index of the first item that matches,and the loop stops
 
-//18
-//Javascript ES6 arrow functions or fat arrow
+### 18
+### Javascript ES6 arrow functions or fat arrow
+```jsx
 {emojipedia.map((emojiTerm) =>
           <Entry
             key={emojiTerm.id}
@@ -2562,16 +2720,17 @@ function App() {
             description={emojiTerm.meaning}
           />
         )}   //Mapping each element of the array to a Entry component using arrow function
+```
 
-
-//19
-//React Conditional rendering with the terenary operator
-/*We are going to create a login flow*/
-/*Sometimes we want to show different components on the screen based on different conditions,
+### 19
+### React Conditional rendering with the terenary operator
+- We are going to create a login flow*/
+- Sometimes we want to show different components on the screen based on different conditions,
 ex:user not logged in,then we will show him login screen
    else we will show him diff component like hello user */
 
-//One way to do it
+- One way to do it
+```jsx
 let isLoggedIn = false;
 function renderConditionally() {
   if (isLoggedIn) {
@@ -2584,11 +2743,14 @@ function renderConditionally() {
 function App() {
   return <div className="container">{renderConditionally()}</div>;
 }
-/*But we are doing it in a lot of lines of code and its not elegant*/
-/*We can only use expressions inside jsx html,we cant use statements which have keywords in them like if,else,swith,for etc
+```
+
+- But we are doing it in a lot of lines of code and its not elegant*/
+- We can only use expressions inside jsx html,we cant use statements which have keywords in them like if,else,swith,for etc
 unlike statements which have only symbols +,-,?,: etc*/
 
-//Best way to do it is using terenary operator
+- Best way to do it is using terenary operator
+```jsx
 let isLoggedIn = false;
 
 function App() {
@@ -2596,20 +2758,29 @@ function App() {
     isLoggedIn?<h1>Hello</h1>:<Login />
   }</div>;
 }
+```
 
-//Sometimes we dont want to render anything if the condition is false then in that case we can do it like this
+- Sometimes we dont want to render anything if the condition is false then in that case we can do it like this
+```jsx
 currentTime>12?<h1>Why are you still working</h1>:null
-//But there is actually even easier way ,can do it using && operator
+```
+- But there is actually even easier way ,can do it using && operator
+```jsx
 currentTime>12 &&  <h1>Why are you still working</h1>  /*They r just trying to render something*/
-//Here if first cond is false ,it wont even bother to check the other cond
+```
+- Here if first cond is false ,it wont even bother to check the other cond
 
 
-//20
-/*Conditional Rendering practice*/
+### 20
+### Conditional Rendering practice*/
+
+```jsx
 var userIsRegistered = false; /*We can send this from App.jsx to Form.jsx component and get the component render in a different way
 using terenary operator*/
+```
 
 App.jsx
+```jsx
 var userIsRegistered = false;
 
 function App() {
@@ -2619,9 +2790,10 @@ function App() {
     </div>
   );
 }
-
+```
 Form.jsx
 
+```jsx
 function Form(props) {
   return (
     <form className="form">
@@ -2635,29 +2807,37 @@ function Form(props) {
   );
 }
 
+
 /*props.isRegistered === false,instead of this we can simply use !props.isRegistered*/
+```
 
-//21
-/*State in React-Declarative vs Imperative programming*/
-/*How do we make our app more interactive,for that we need to understand State,this is really central concept to how React
+### 21
+### State in React-Declarative vs Imperative programming*/
+
+- How do we make our app more interactive,for that we need to understand State,this is really central concept to how React
 does things*/
-//UI=f(State)
-/*Ice and water is the same component ,based on the state of temperature the form of component changes*/
-//Ice  - UI=f(-10degcel)
-//Water- UI=f(60degcel)
-/*User interface is reflecting the changes in state variable*/
+- UI=f(State)
+- Ice and water is the same component ,based on the state of temperature the form of component changes*/
+- Ice  - UI=f(-10degcel)
+- Water- UI=f(60degcel)
+- User interface is reflecting the changes in state variable*/
 
+```jsx
 function App(){
 	var isDone=true;
 	const strikeThrough={textDecoration: "line-through"}
 	return <p style={isDone&&strikeThrough}> Buy Milk </p>; /*Here the component look is dependent on the state variable isDone*/
 }
 
+
 /*This type of programming is called Declarative programming,cuz we are declaring how our component looks using terenary op*/
-//Imperative Programming
+```
+
+- Imperative Programming
 document.getElementById("root").style.textDecoration="line-through";
 
-/*In order for this code to work they had to be rerenderd each time,and to do that we have to learn hooks*/
+- In order for this code to work they had to be rerenderd each time,and to do that we have to learn hooks*/
+```jsx
 var isDone = false;
 
 function strike() {
@@ -2677,15 +2857,17 @@ function App() {
     </div>
   );
 }
+```
 
-/*Hooks allows us to modify,read,hook into the state variable*/
+- Hooks allows us to modify,read,hook into the state variable*/
 
-/*In the next lesson we will see one of the most commonly used React hooks which is the useState hook*/
+- In the next lesson we will see one of the most commonly used React hooks which is the useState hook*/
 
 
-//22
-//React Hooks -useState
+### 22
+### React Hooks -useState
 
+```jsx
 //This is inefficient,and repitive
 import React from "react";
 import ReactDOM from "react-dom";
@@ -2708,17 +2890,21 @@ ReactDOM.render(
   </div>,
   document.getElementById("root")
 );
+```
 
-//We solve this problem using useState hook
-//One of the rules for using hooks is that u must use a hook inside a functioal component
+- We solve this problem using useState hook
+- One of the rules for using hooks is that u must use a hook inside a functioal component
+```jsx
 import React from "react";
 let state=React.useState(34);  //one way to use useState
 
 import React,{useState} from "react";
   let state=useState(3424);   //We are providing initial state value
 console.log(state)  //output - [stateVariable value, ƒ bound dispatchAction()]
+```
 
 ////////////////Example////////////////
+```jsx
 import React,{useState} from "react";
 
 function App() {
@@ -2738,10 +2924,12 @@ function decrease(){
     </div>
   );
 }
+```
 
 
-//23
-//useState() hook practice
+### 23
+### useState() hook practice
+```jsx
 function App() {
   let [time, setTime] = React.useState(new Date().toLocaleTimeString());
   function currentTime() {
@@ -2758,9 +2946,11 @@ function App() {
     </div>
   );
 }
+```
 
-//24
-//Javascript ES6 Object & Array Destructuring
+### 24
+### Javascript ES6 Object & Array Destructuring
+```jsx
 //Destrcturing an Array
 const animals = [
   { name: "cat", sound: "meow" },
@@ -2795,10 +2985,12 @@ const tesla={
 let {coloursByPopularity:[teslaTopColour],speedStats:{topSpeed:teslaTopSpeed}}=tesla
 //here teslaTopColour is red,teslaTopSpeed is 150
 
+```
 
-//25
-//Event Handling in React
-/*How u can detect when a user interacts with ur component,and render diff things bases on those events*/
+### 25
+### Event Handling in React
+- How u can detect when a user interacts with ur component,and render diff things bases on those events*/
+```jsx
 function App() {
   let [headingText, setHeadingText] = useState("Hello");
   let [isMousedOver, setMouseOver] = useState(false); //initially isMousedOver is false
@@ -2827,9 +3019,12 @@ function App() {
   );
 }
 /*We can use terenary op inside js object*/
+```
 
-//26
-//React Forms
+### 26
+### React Forms
+
+```jsx
 /*Events that arise within a form*/
 
 //Just like for button we have onClick,for input element we have onChange attribute
@@ -2891,21 +3086,27 @@ function App() {
     </div>
   );
 }
+```
 
+### 27
+### Class Components vs Functional Components*/
+Hooks vs Classes
+- There were two ways of adding state into a React App*/
+- One way is using functional components*/
+- Theres also another way to create React components,which is using classes*/
+Hook
 
-//27
-/*Class Components vs Functional Components*/
-//Hooks vs Classes
-/*There were two ways of adding state into a React App*/
-/*One way is using functional components*/
-/*Theres also another way to create React components,which is using classes*/
-//Hook
+```jsx
 import React from 'react';
 function App(){
 return <h1>Hello</h1>;
 }
 export default App;
-//Class
+```
+
+Class
+
+```jsx
 import React from 'react';
 class App extends React.Component{
 render(){
@@ -2913,14 +3114,16 @@ return <h1>Hello</h1>
 }
 }
 export default App;
+```
 
-/*It the past why people converted their functional components into class components was because it was required in order to
+- It the past why people converted their functional components into class components was because it was required in order to
 have state*/
-/*What does managing state using classes look like?,its difficult to read*/
-/*Using hooks is much easier way to manage state and code is much clearer*/
+- What does managing state using classes look like?,its difficult to read*/
+- Using hooks is much easier way to manage state and code is much clearer*/
 
-//28
-/*Changing Complex State*/
+### 28
+### Changing Complex State*/
+```jsx
 /*Managing the state of Js object where u might have to retrieve the previous value of the object*/
 function App() {
   const [fname,setFname]=React.useState("");
@@ -2944,7 +3147,10 @@ function App() {
 }
 
 /*but fname and lname probably belong to the same js object*/
+
+```
 /**/
+```jsx
 function App() {
   const [fullName, setFullName] = React.useState({
     fName: "",
@@ -2994,9 +3200,11 @@ function App() {
 }
 
 /*Dont use event.target inside a setState() fun, it will give error,cuz event is a synthetic event */
+```
 
-//29
-//Changing Complex State practice
+### 29
+### Changing Complex State practice
+```jsx
 function App() {
   const [contact, setContact] = useState({
     fName: "",
@@ -3044,10 +3252,12 @@ function App() {
   );
 }
 //In the next lesson we will learn how to reduce the above code into just two or three lines,using spread operator
+```
 
 
-//30
-//Javascript ES6 Spread Operator
+### 30
+### Javascript ES6 Spread Operator
+```jsx
 //Spread operator is indicated by ...(three dots)
 const citrus=["lime","lemon","orange"]
 const fruits=["Apple",...citrus,"Coconut"]
@@ -3084,10 +3294,12 @@ function App() {
       };
     });
   }
+```
 
+### 31
+### Spread operator practice todo list app
 
-//31
-//Spread operator practice todo list app
+```jsx
 function App() {
   const [itemsArray,setItemsArray]=React.useState([]);
   const [item,setItem]=React.useState("");
@@ -3124,10 +3336,12 @@ function App() {
 }
 
 /*In next lesson we will learn how to manage a component tree,and how to pass state from child components to parent components*/
+```
 
 
-//32
-/*Managing a component tree*/
+### 32
+### Managing a component tree*/
+```jsx
 //In our todo app
 /*we have a app component,and its child component todoitem */
 /*The todoitem has state clicked=true/false based on that it has line-through or not*/
@@ -3152,13 +3366,14 @@ function ToDoItem(props) {
     props.checkedItem(props.id)
   }}>{props.text}</li>;
 }
+```
 
-//33
-/*React Dependencies and Styling the Keeper App*/
-/*We will be going to use some pre-built components by adding some dependencies*/
-/*Add material-ui/core and material-ui/icons as dependencies*/
-/*The benefit of using react components over bootstrap or fav icons is that,in react js,html,css pretty much all combined
+### 33
+### React Dependencies and Styling the Keeper App*/
+- We will be going to use some pre-built components by adding some dependencies*/
+- Add material-ui/core and material-ui/icons as dependencies*/
+- The benefit of using react components over bootstrap or fav icons is that,in react js,html,css pretty much all combined
 into one of the components,we can even add components that have some functionality */
-/*material ui docs>material icons*/
-//We can have floating action button
-/*Transparent textures website*/
+- material ui docs>material icons*/
+- We can have floating action button
+- Transparent textures website*/
