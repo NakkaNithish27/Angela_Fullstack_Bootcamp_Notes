@@ -1,3 +1,31 @@
+[HTML NOTES](#html-notes)
+
+[Web Design](#web-design)
+
+[Javascript](#javascript)
+
+[Jquery](#jquery)
+
+[Intro to NODE](#intro-to-node)
+
+[EXPRESS JS](#express-js)
+
+[COMMAND LINE NOTES](#command-line-notes)
+
+[GITHUB NOTES](#github-notes)
+
+[SQL](#sql)
+
+[MONGODB](#mongodb)
+
+[MONGOOSE](#mongoose)
+
+[RESTful API](#restful-api)
+
+[Introduction to Authentication](#introduction-to-authentication)
+
+[REACT JS NOTES](#react-js-notes)
+
 ## HTML NOTES 
 
 ```html
@@ -411,7 +439,7 @@ setTimeout(function(){
 ```
 
 
-### 9)jQuery
+### jQuery
 ### 1
 
 - javascript library,reduces the javascript code
@@ -536,7 +564,7 @@ $("button").click(function() {
 ```
 //10)Simon Game project
 
-### 11)Intro to NODE
+### Intro to NODE
 ### 1
 
 - REPL(READ EVALUATION PRINT LOOP)
@@ -889,7 +917,7 @@ git commit -m "Change success page h1"
 git push heroku master
 
 
-### 16)COMMAND LINE NOTES
+### COMMAND LINE NOTES
 - HYPER TERMINAL(git,git bash,command line,terminal)
 - We need to cinfigure hyper to use git bash.
 - We use shells(GUI,Command Line) to interact with the kernal of the os.
@@ -918,7 +946,7 @@ $ rm -r foldername  (-r is a flag)
 
 
 
-### 17)GITHUB NOTES
+### GITHUB NOTES
 ### 1
 - Introduction to version control and git
 
@@ -1251,7 +1279,7 @@ app.get("/news/:topic",function(req,res){
 - It ignores hypens and returns only pure lower case strings
 - in urls we use kebab case,but we store postTitles with first letter capitals
 
-### 20)SQL
+### SQL
 ### 1
 - Databases Explained SQL(Structured Query Language) vs NOSQL(Not Only Structured Query Language)
 - Depending on the type of data that youre looking to store,and the structure of the data we choose Databases.
@@ -1323,7 +1351,7 @@ DELETE FROM products WHERE id=2
 - Later we use joins to form a table as our wish  - ex:inner join,left join and so on
 
 
-### 21)MONGODB
+### MONGODB
 ### Installing MongoDB on windows
 - C:\Program Files\MongoDB\Server\6.0\data\
 - vim filename //to edit with vim editor
@@ -1445,7 +1473,7 @@ with a high level of control*/
 ### 22)NATIVE MONGODB DRIVER
 
 
-### 23)MONGOOSE
+### MONGOOSE
 
 ### 336)Introduction to Mongoose
 - Mongoose is called ODM(Object Document Mapper)
@@ -1591,7 +1619,7 @@ person.save();
 //Now the person inside people collection have a relationship with a fruit inside fruits collection
 ```
 
-### 24)RESTful API
+### RESTful API
 ### Build your own RESTful API
 
 Client<---->Server<----->DataBase
@@ -2190,7 +2218,8 @@ and all of their identification so that we can authenticate them on our server*/
 its going to take care of a lot that in between code for us*/
 
 - We just need to do is just add these three lines of code from passport-local-mongoose documentation,right below where we create our new mongoose model*/
-```j- passport.use(User.createStrategy()); //to create a local login strategy
+```js
+passport.use(User.createStrategy()); //to create a local login strategy
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
