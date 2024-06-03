@@ -503,8 +503,10 @@ $(document).on("keydown", function(event) { //Even more flexible way of adding e
 })
 ```
 
-//9
-//ADDING AND REMOVING ELEMENTS WITH jQuery
+### 9
+### ADDING AND REMOVING ELEMENTS WITH jQuery
+
+```js
 $("h1").before("<button>Button</button>") //adds button before <h1></h1> element
 $("h1").after("<button>Button</button>") //adds button after <h1></h1> element
 $("h1").prepend("<button>Button</button>") //adds button like this <h1><button></button> H1 </h1> element
@@ -512,8 +514,11 @@ $("h1").append("<button>Button</button>") //adds button like this <h1> H1 <butto
 
 $('button').remove(); //removes all the buttons on the page
 
-//10
-//WEBSITE ANIMATIONS WITH jQuery
+```
+
+### 10
+### WEBSITE ANIMATIONS WITH jQuery
+```js
 $("button").click(function() {
   // $("h1").hide();
   // $("h1").show(300);
@@ -528,38 +533,43 @@ $("button").click(function() {
   // $("h1").slideUp().slideDown().animate({opacity:0.5});  //chaining multiple animations to single element
 })
 
+```
 //10)Simon Game project
 
-//11)Intro to NODE
-//1
-//REPL(READ EVALUATION PRINT LOOP)
+### 11)Intro to NODE
+### 1
+
+- REPL(READ EVALUATION PRINT LOOP)
 node //to enter repl mode
-//half enter any command and tap tab twice to see all possible commands
-//to exit
-.exit ctrl+c /*twice*/ ctrl+d
-clear //clears the console
+- half enter any command and tap tab twice to see all possible commands
+- to exit
+.exit ctrl+c /*twice*/ 
+- ctrl+d
+- `clear //clears the console`
 
-//2
-//HOW TO USE NATIVE/INTERNAL NODE MODULES
-const fs = require('node:fs');
+### 2
+### HOW TO USE NATIVE/INTERNAL NODE MODULES
+`const fs = require('node:fs');`
 
-//3
-//THE NPM PACKAGE MANAGER AND INSTALLING EXTERNAL NODE MODULES IN TO OUR PROJECT
-//NPM -Node Package Manager
+### 3
+### THE NPM PACKAGE MANAGER AND INSTALLING EXTERNAL NODE MODULES IN TO OUR PROJECT
+
+- NPM -Node Package Manager
 npm init //it will initialize npm and after all the steps it will create package.json file
-//go to npmjs.com
-//search for a package
-//in terminal type, npm install packagename
-//then it will add that external package as a dependency into our project.
+- go to npmjs.com
+- search for a package
+- in terminal type, npm install packagename
+- then it will add that external package as a dependency into our project.
 
-/*EXPRESS JS*/
-//Just how jQuery add extra features and makes it easy to work with javascript
-/*Express does the same thing to Node,it adds extra features and helps to organize and structure our code,specifically
+### EXPRESS JS
+- Just how jQuery add extra features and makes it easy to work with javascript
+- Express does the same thing to Node,it adds extra features and helps to organize and structure our code,specifically
 web applications build with node*/
 
 
-//12)My-Express-Server
-//1
+### 12)My-Express-Server
+### 1
+```js
 //CREATING OUR FIRST SERVER WITH EXPRESS
 /*First create a folder,npm init,npm install express*/
 
@@ -571,9 +581,12 @@ app.listen(3000) //server is started at port 3000 and is listening
 localhost: 3000
 /*means now our browser is making a request to the Server
 we made*/
+```
 
-//2
-//HANDLING REQUESTS AND RESPONSES
+### 2
+### HANDLING REQUESTS AND RESPONSES
+```js
+
 //The get request
 //In our case localhost:3000 is a home page just like www.google.com that is what we call the root
 app.get("/", function(request, response) { //When our server gets a request root that is our home page
@@ -581,9 +594,10 @@ app.get("/", function(request, response) { //When our server gets a request root
   response.send("Hello"); //Sends hello to browser
   response.send("<h1>Hello,world</h1>");
 })
-
-//3
-//UNDERSTANDING AND WORKING WITH ROUTE/ROOT
+```
+### 3
+### UNDERSTANDING AND WORKING WITH ROUTE/ROOT
+```js
 app.get("/contact", function(req, res) { //when our server gets request to our contact route/page
   res.send("Contact me at nakkanithish143@gmail.com")
 })
@@ -594,26 +608,29 @@ in the sever code*/
 /*To install Nodemon type*/
 npm install -g nodemon //In termianl
 /*After installing nodemon,run your server with*/ nodemon filename.js /*instead of*/ node filename.js
+```
 
-
-//13)Calculator
-//1
-//MAKING A WEBAPPLICATION(CALCULATOR) WITH A SERVER USING NODE AND EXPRESS.
-/*Until now we made static websites using html,css,js files which are requested by browser,and all the code
+### 13)Calculator
+### 1
+- MAKING A WEBAPPLICATION(CALCULATOR) WITH A SERVER USING NODE AND EXPRESS.
+- Until now we made static websites using html,css,js files which are requested by browser,and all the code
  runs on client browser*/
-/*In this lesson we make website ,all our code runs on server side and only the outcome sends to browser*/
+- In this lesson we make website ,all our code runs on server side and only the outcome sends to browser*/
 
-//2
+### 2
 //ports 3000,4040,8080,5000
 
-//3
-//RESPONDING TO REQUESTS WITH HTML FILES
+### 3
+### RESPONDING TO REQUESTS WITH HTML FILES
+```js
 __dirname //gives the file/directory path,whereever the file is on the cloud
 name="" //in html act as a variable name
 res.sendFile(__dirname+"/index.html"); //instead of send relative filepath,we give current file path like this in server
+```
 
-//3
-//PROCESSING POST REQUESTS WITH BODY PARSER
+### 3
+### PROCESSING POST REQUESTS WITH BODY PARSER
+  ```js
   <form action="/" method="post"> //means post the data entered in to the inputs of this form to home route
 //In network tab you can see all requests
 /*We can handle that post using*/
@@ -635,94 +652,110 @@ console.log(req.body); gives { num1: '6', num2: '2', submit: '' }
 //My understanding
 //When ever a user lands on a page in our website,we should have a app.get("",f(req,res){res.send()}) for that
 //We need to have a app.post() to handle the post they did using the html form we send in above step.
+```
 
-//4
+4
+```js
 type="submit" //It will trigger post request of the form
+```
 
 
-//14)WeatherApp
+### 14)WeatherApp
 /*We have a normal request*/ app.get()
 /*a post request*/ app.post()
-//1
+1
+```js
 //Weather API from openwhethermap,facebool API,Financial modeling prep API,PokeAPI
 //For every website has certain data that it will allows others to access.
 //API is like a contract b/n data provider and developer
 //jQuery is also an API that allows us to create software
 //In this module we will learn differnt APIs that allows us to interact with external server.
+```
 
 
-//2
-//API presents between our server and someone elses server
-//API ENDPOINTS,PATHS AND PARAMETERS
-1)Endpoints
-2)paths
-3)Parameters
-4)Authentication
+### 2
+### API presents between our server and someone elses server
+### API ENDPOINTS,PATHS AND PARAMETERS
+1. Endpoints
+2. paths
+3. Parameters
+4. Authentication
 
 1)ENDPOINTS
+
+```js
 //Every API that interacts with an external system/server will have an endpoint.
 //Endpoint of kanye.rest api is https://api.kanye.rest
+```
 
 2)PATHS AND PARAMENTERS
-//Using paths and parameters we can customize the data that we get back
+
+- Using paths and parameters we can customize the data that we get back
 https://sv443.net/jokeapo/v2/joke  //is the endpoint for joke API
-//We can add path after joke ex: /dark,/programming_jokes etc.,
-//We can also use parameter which is a key value pair that goes at the end of the url after the ? like ?contains=debugging
+- We can add path after joke ex: /dark,/programming_jokes etc.,
+- We can also use parameter which is a key value pair that goes at the end of the url after the ? like ?contains=debugging
 ex:https://sv443.net/jokeapo/v2/joke/Programming?blacklistFlags=nsfw&contains=debugging
-//If we have more than one parameter we separate them with an & symbol
+- If we have more than one parameter we separate them with an & symbol
 
-3)API Authentication and Postman
-/*When it comes to data that is more monitizable or allows devleopers to build more complex appications used by 1000s of people,
+3) API Authentication and Postman
+- When it comes to data that is more monitizable or allows devleopers to build more complex appications used by 1000s of people,
 then to limit your use to a threshold,they use Authentication with the help of API keys.*/
-//we need to buy plans for differnt traffic.
+- we need to buy plans for differnt traffic.
 https://api.openweathermap.org/data/2.5/weather?q=London,uk&appid=048f6f3572827f100694258d4b7ca5fa(API key)
-//the default unit of temp for openweathermap is kelvin,we can change it using units=metric parameter(read API docs)
+- the default unit of temp for openweathermap is kelvin,we can change it using units=metric parameter(read API docs)
 
-//For testing APIs we use Postman
+- For testing APIs we use Postman
 //We get the data from the server to frontend in the form of JSON.
 
-//3
-//What is JSON?
-//javascript Object Notation
-//The data we get back from server in JSON format look like a javascript object.
-//JSON is readable by human,and it is also easily collapsable into a single string.
-//JSON is not the only format we can get the data from an api,we can also get data in the form of XML/HTML formats.
+### 3
+### What is JSON?
+- javascript Object Notation
+- The data we get back from server in JSON format look like a javascript object.
+- JSON is readable by human,and it is also easily collapsable into a single string.
+- JSON is not the only format we can get the data from an api,we can also get data in the form of XML/HTML formats.
 
-//4
-//MAKING GET REQUESTS WITH THE NODE HTTPS MODULE
-/*When the client make a get request to our server,from our server we send a req to someone elses server with required parameters
+### 4
+### MAKING GET REQUESTS WITH THE NODE HTTPS MODULE
+- When the client make a get request to our server,from our server we send a req to someone elses server with required parameters
 via their api(its like a menu they provided) to get the data back,and we include that data in our response.*/
+```js
 const app=express(); //It will initialize a new express app.
+```
 
-//Google 5 Ways to Make HTTP Requests in Node.js
-//We can use native node module called https to send a request to external server.
+- Google 5 Ways to Make HTTP Requests in Node.js
+- We can use native node module called https to send a request to external server.
+```js
 const https = require('https');
 https.get(url,function(response){ //sends a req to url and fetch data as a response
   console.log(response);
 })
+```
 
-//5
-//HOW TO PARSE JSON
-console.log(response.statuscode);
+### 5
+### HOW TO PARSE JSON
+`console.log(response.statuscode);`
 //Google "HTTP response status codes"
-200 - ok
-404 - resourse not found
-401 - unauthorized
+- 200 - ok
+- 404 - resourse not found
+- 401 - unauthorized
 
+```js
 https.get(url,function(response){
   console.log(response.statusCode);
   response.on("data",function(data){ //the response from external server contains on() method,if it is "data" then triggers callback
     console.log(data);   //here the data we get is in hexadecimal format
   })
+  ```
 
-//Instead of getting a hex data,we can convert it into javascript object Using
-//String to javascript object
+- Instead of getting a hex data,we can convert it into javascript object Using
+- String to javascript object
 const weatherData=JSON.parse(data); //It will turn json in some sort of string formats say hexadecimal/binary/text into an actual javascript object.
-/*JSON is a string representation of an object. It is an interoperable serialization format. It is not tied only to javascript.
+- JSON is a string representation of an object. It is an interoperable serialization format. It is not tied only to javascript.
 For example there are JSON serializers for .NET allowing you to serialize/deserialize .NET objects.*/
 
-//We can also do the reverse Way
-//javascript Object to String
+- We can also do the reverse Way
+- javascript Object to String
+```js
 const object={
   name:"Nithish",
   age:20
@@ -733,9 +766,11 @@ In terminal:
 
 console.log(weatherData.main.temp);
 //instead of manually tracking a value in js object,copy the value path from json viewer awesome chrome extension
+```
 
-//6
-//USING EXPRESS TO RENDER WEBSITE WITH LIVE API DATA
+### 6
+### USING EXPRESS TO RENDER WEBSITE WITH LIVE API DATA
+```js
 //There is only one res.send() in callback fun of an app.get() method,otherwise it will crash.
 //but we can have multiple res.write() methods,at the end we call res.send()
 res.write("<h1>" + "The temperature in London is " + temp + " degrees Celsius" + "</h1>");
@@ -745,30 +780,31 @@ res.send();
 //from that icon value we can get the weather image
 ex: const imgURL="http://openweathermap.org/img/wn/"+icon+"@2x.png" //read the api docs
  res.write("<img src="+imgURL+">")
+ ```
 
- //7
- //USING bodyParser TO PARSE POST REQUESTS TO THE SERVER
- //lets divide the url into different variables
- //When the user visits our home page ,send back an html file which contains a form or whatever
- //when the user post anything using that form ,parse that post request using body-parser
- //use the user entered data as a part of the api endpoint query/path/parameter whatever
+ ### 7
+ ### USING bodyParser TO PARSE POST REQUESTS TO THE SERVER
+ - lets divide the url into different variables
+ - When the user visits our home page ,send back an html file which contains a form or whatever
+ - when the user post anything using that form ,parse that post request using body-parser
+ - use the user entered data as a part of the api endpoint query/path/parameter whatever
 
- //8
- //THE MAILCHIMP API
+ ### 8
+ ### THE MAILCHIMP API
  //Creating a signup page for a news letter
 
 
 
-//15)Newsletter-Signup
-//1
-//THE MAILCHIMP API
-//Creating a signup page for a news letter
-/*In a lot of projects,especially node js projects that use express we will see that we write the server side coding
+### 15)Newsletter-Signup
+### 1
+- THE MAILCHIMP API
+- Creating a signup page for a news letter
+- In a lot of projects,especially node js projects that use express we will see that we write the server side coding
 in a file called app.js*/
 
-//2
-//Take a signup page from bootstrap.
-//Add bootstrap cdn link.
+### 2
+### Take a signup page from bootstrap.
+```js### //Add bootstrap cdn link.
 //create a style.css if there is any custom css
 <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" required autofocus>
 /*Customize it as your requirment*/
@@ -779,15 +815,15 @@ in a file called app.js*/
 app.use(express.static("public"))
 
 <link href="css/styles.css" rel="stylesheet"> //css is inside public
-
-//3
-//POSTING DATA TO MAILCHIMP'S SERVERS VIA THEIR WEBAPPLICATION
-//Search about lists in mailchimp api docs
-//first the developer needs to get an api key to authenticate himself with their servers
-//Go to mailchimp and create an account
-//Create an api key
-//go to audience>settings to get a list //
-//They expect to send data in json format,for that we need to create a js object with key value pairs with keys that mailchimp recognize
+```
+### 3
+### POSTING DATA TO MAILCHIMP'S SERVERS VIA THEIR WEBAPPLICATION
+- Search about lists in mailchimp api docs
+- first the developer needs to get an api key to authenticate himself with their servers
+- Go to mailchimp and create an account
+- Create an api key
+- go to audience>settings to get a list //
+- They expect to send data in json format,for that we need to create a js object with key value pairs with keys that mailchimp recognize
 var data={
   members:[{
     email_address:email,
@@ -853,21 +889,24 @@ git commit -m "Change success page h1"
 git push heroku master
 
 
-//16)COMMAND LINE NOTES
-HYPER TERMINAL(git,git bash,command line,terminal)
-We need to cinfigure hyper to use git bash.
-We use shells(GUI,Command Line) to interact with the kernal of the os.
-Bash shell is a Command Line Interpreter(CLI) for the UNIX system.
-Commands that I learned
-mkdir foldername
-ls
-cd
-cd ~ (go back to root directory)
-cd .. (go one level back)
-cd "C:\Users\nakka\Music\VideoProc Converter"
-ctrl A,ctrl E,ctrl U
+### 16)COMMAND LINE NOTES
+- HYPER TERMINAL(git,git bash,command line,terminal)
+- We need to cinfigure hyper to use git bash.
+- We use shells(GUI,Command Line) to interact with the kernal of the os.
+- Bash shell is a Command Line Interpreter(CLI) for the UNIX system.
+- Commands that I learned
 
-CREATING,OPENING,AND REMOVING FILES THROUGH THE COMMAND LINE
+      mkdir foldername
+      ls
+      cd
+      cd ~ (go back to root directory)
+      cd .. (go one level back)
+      cd "C:\Users\nakka\Music\VideoProc Converter"
+      ctrl A,ctrl E,ctrl U
+
+### CREATING,OPENING,AND REMOVING FILES THROUGH THE COMMAND LINE
+
+```bash
 touch filename.extension  //creates a file
 start filename.extension  //opens a file
 rm filename.extension	  //removes a file
@@ -875,103 +914,108 @@ pwd                       //printing working directory
 rm *                      //removes all files in current folder
 //always check with directory you are in beforw doing any deleting commands.
 $ rm -r foldername  (-r is a flag)
+```
 
 
 
-//17)GITHUB NOTES
-//1
-Introduction to version control and git
+### 17)GITHUB NOTES
+### 1
+- Introduction to version control and git
 
-you can create different savepoints while development of project calling them as different version,if you screw up your code,
+- you can create different savepoints while development of project calling them as different version,if you screw up your code,
 you can roll back to previous version
 
-//2
-//Version control using Git and the Command Line
+### 2
+### Version control using Git and the Command Line
 
-We are inside our Story directory,it is called as working directory.
-git init //creates a .git folder
+- We are inside our Story directory,it is called as working directory.
+- `git init` //creates a .git folder
 Initialized empty Git repository in D:/Web Development/Story/.git/
 
-But we cannot find a .git folder inside Story folder,it is a secret folder
-We can see it in terminal using
-ls -a command
-In order to start tracking the changes inside files,for ex:chapter1.txt,we need to add this file to
-staging area.
+- But we cannot find a .git folder inside Story folder,it is a secret folder
+- We can see it in terminal using
+`ls -a` command
+- In order to start tracking the changes inside files,for ex:chapter1.txt,we need to add this file to staging area.
 
-git status
+- `git status`
 The files which are inside working directory,but not in staging area are shown in red.
-git add filename //To add file into staging area
-git commit -m "Complete chapter1" //adds a save point,as a convention we write messages in present tense
-git log  //you can see what commits you have made
+- `git add filename` //To add file into staging area
+- `git commit -m` "Complete chapter1" //adds a save point,as a convention we write messages in present tense
+- `git log`  //you can see what commits you have made
 //instead of adding each file to staging area using  git add filename
-git add .  //we can add all the files inside the working directory into staging area using this command
-(HEAD -> master) //It means the current version/state we are in
+- `git add .`  //we can add all the files inside the working directory into staging area using this command
+- (HEAD -> master) //It means the current version/state we are in
 
-We have three areas here
-Working Directory,Staging area,Local Repository
+***We have three areas he- 
+Working Directory,Staging area,Local Repository***
 
-//Staging area is used because we may not want to track all the files.
-//If we are happy with the file,then we will commit it to the local repository(.git) given a version
+- Staging area is used because we may not want to track all the files.
+- If we are happy with the file,then we will commit it to the local repository(.git) given a version
 name through the commit message
-//Let say if we messed up the chapter3 and saved it by mistake.
-git status //it shows if there are any changes that are not commited.
-//If you just want to see the changes that are accidentally made
-git diff filename //It shows the part that was deleted from the file in red
-git checkout filename //rollback to the previous state of the file of last savepoint
-//In this video we have only talked about how to work with local repositories.
+- Let say if we messed up the chapter3 and saved it by mistake.
+`git status` //it shows if there are any changes that are not commited.
+- If you just want to see the changes that are accidentally made
+`git diff filename` //It shows the part that was deleted from the file in red
+- `git checkout filename` //rollback to the previous state of the file of last savepoint
+- In this video we have only talked about how to work with local repositories.
 
-//3
-//Github Remote Repositories,creating repositories in someone else computer/server
-//Exporting a local repository to git hub repository
-//Create a new repository in github without readme file
-git remote add origin url //It will create the remote repository
+### 3
+### Github Remote Repositories,creating repositories in someone else computer/server
+- Exporting a local repository to git hub repository
+- Create a new repository in github without readme file
+- `git remote add origin url` //It will create the remote repository
 (origin is simply the name of our remote,we can call it anything if we want)
-git push -u origin master //it pushes the local repository to the remote which is the origin here,master
+- `git push -u origin master` //it pushes the local repository to the remote which is the origin here,master
 is the main branch/default branch
-github insights>Network
-//Master branch is the main progress line of commits
-//We can have a local repository and a remote repository in github in parallel
-//We can push our local repository to remote repository using git push -u branch
+- github insights>Network
+- Master branch is the main progress line of commits
+- We can have a local repository and a remote repository in github in parallel
+- We can push our local repository to remote repository using git push -u branch
 
-//gitignore
+- `gitignore`
 files that we dont want to add to the github like files DS_Store,files that contains api keys,passwords
-touch .gitignore
-$ git rm --cached -r .  //to remove all files from the staging area
-in the .gitignore file write the filenames as it is with extensions also
+
+- `touch .gitignore`
+- $ `git rm --cached -r` .  //to remove all files from the staging area
+- in the .gitignore file write the filenames as it is with extensions also
 gitignore file has some rules to follow
+```
 #for commenting
 *.txt  //it will add all the files with .txt to .gitignore
-go to github/gitignore repository on github where u can find predefined templates for various projects
+```
+- go to github/gitignore repository on github where u can find predefined templates for various projects
 
-//Cloning a remote repository to pull it to your local machine
-git clone url
+- Cloning a remote repository to pull it to your local machine
+`git clone url`
 
-//Branching and Merging
-If we want to try something in our project that we are not confident of, so instead of commiting it
-to our main branch we can create a side branch(experimental branch),and offcourse we can also work parallerly with our main branch
-If the experimental version is successful we can simply merge it to the main branch with a merge request.
+- Branching and Merging
+- If we want to try something in our project that we are not confident of, so instead of commiting it to our main branch we can create a side branch(experimental branch),and offcourse we can also work parallerly with our main branch
 
-git branch branchname  //to create a new branch
-git branch //to view the branches
-git checkout branchname //to move between the branches
+- If the experimental version is successful we can simply merge it to the main branch with a merge request.
 
-After going to a side branch add files to the staging area
+- `git branch branchname`  //to create a new branch
+- `git branch` //to view the branches
+- `git checkout branchname` //to move between the branches
+
+- After going to a side branch add files to the staging area
 commit the changes
 
-our local files actually changes as we switch branches
-In order to merge side branch to main/master branch,go to your master branch and type
-git merge sidebranchname
+- our local files actually changes as we switch branches
+- In order to merge side branch to main/master branch,go to your master branch and type
+`git merge sidebranchname`
 
-we can also create and merge branches in github itself.
+- we can also create and merge branches in github itself.
 
-//Forking and pull requests
-clone your repo>work on it locally>git push
+### Forking and pull requests
+- clone your repo>work on it locally>git push
 fork others repo into your github account>clone it>work on it locally>git push>send pull req
 fork makes a copy remotely,while clone makes copy locally.
 
 
-//18)TODOLIST-V1
-//1
+### 18)TODOLIST-V1
+### 1
+
+```js
 //Templates?Why do we need Templates?
 //We know that a callback fun has only on res.send(),but it can have multiple res.write()
 app.get("/",function (req,res){
@@ -988,9 +1032,11 @@ app.get("/",function (req,res){
 /*But what if we want to send diff html file based on the logic,so creating a whole bunch of html files like weekend.html,weekday.html
 is a pain in the ass,so thats why we need to learn templating.*/
 //A blog website has a thousand of html files,no one creates them manually
+```
 
-//2
-//Creating your First EJS Templates
+### 2
+### Creating your First EJS Templates
+```js
 // EJS (Embedded JavaScript Templating) is one of the most popular template engines for JavaScript
 // It also helps to embed JavaScript to HTML pages
 //go to ejs.co>using ejs with express
@@ -1000,14 +1046,19 @@ app.set("view engine", "ejs"); //set view engine to ejs
 //Setup a views folder with all ejs files in it.
 //In html template/ejs file the variable is elclosed with a marker like this <%=kindOfDay%> ,and we pass its value from the server file
 res.render("ejsfilename",{kindOfDay:value})
+```
 
-//3
-//Running code inside ejs template(which is a html file)
+### 3
+### Running code inside ejs template(which is a html file)
+
+```js
 <% %> //Scriptlet tag allows us to use only control flow statements(no output) inside ejs file,because its for only content
 //We should always try to put logic in server file
 //We should enclose each js line with scriplet tag
   <%if(kindOfDay=== "Saturday"||kindOfDay=== "Sunday"){%> //observe this,we havent used <%= %> for kindOfDay
     <h1 style="color:blue"> Its a <%=kindOfDay%></h1>
+    
+```
 //4
 //PASSING DATA FROM YOUR WEBPAGE TO YOUR SERVER
 //Search date format in js in chrome
@@ -1063,8 +1114,9 @@ input:checked+p {
   opacity: 1;
 }
 
-//7
-//Understanding Templating vs Layouts
+### 7
+### Understanding Templating vs Layouts
+```js
 //We can simply use the same ejs template for webpages the need the same functionality ,with some changes
 //But the problem arises when we want to create pages that dont need the most of the exiting ejs file functionality
 //So EJS provides Layout/Partials
@@ -1073,40 +1125,44 @@ input:checked+p {
 <%-include('header')-%>
 <%-include('footer')-%>
 //
-//8
-//UNDERSTANDING NODE MODULE EXPORTS: HOW TO PASS FUNCTIONS AND DATA BETWEEN FILES
-//create a new module called date.js,with the date format code
-//In order to use one module/file inside another file we need to require it
-//const date=require(__dirname+"/date.js")
-//Inside each module we can access a js object called module which contains a info about that module.
-//whenever we require a module,it tries to run all the code inside the module
-//In module obj we have a key called exports with a js object as its value
+```
+### 8
+### UNDERSTANDING NODE MODULE EXPORTS: HOW TO PASS FUNCTIONS AND DATA BETWEEN FILES
+- create a new module called date.js,with the date format code
+- In order to use one module/file inside another file we need to require it
+- const date=require(__dirname+"/date.js")
+- Inside each module we can access a js object called module which contains a info about that module.
+- whenever we require a module,it tries to run all the code inside the module
+- In module obj we have a key called exports with a js object as its value
+```js
 exports: {}
 module.exports.getDate=getDate; //Exporting  getDate fun from date.js file
 module.exports.getDay=getDay;   //Exporting  getDay fun from date.js file
-//exports.getDate=getDate;
-//exports.getDay=getDay;   //Short cuts that we can use
+exports.getDate=getDate;
+exports.getDay=getDay;   //Short cuts that we can use
 exports:{ getDate: [Function: getDate], getDay: [Function: getDay] }
 const date=require(__dirname+"/date.js")
-//Now we can access those functions using date.getDate(),date.getDay()
-//When we make an array const,we can reassign that variable to a new object,but we can actually push items it to it,
-//It is one of the quirks of js
-//So when we make an array const in js,it cant protect inside values getting changed by others
+```
+- Now we can access those functions using date.getDate(),date.getDay()
+- When we make an array const,we can reassign that variable to a new object,but we can actually push items it to it,
+- It is one of the quirks of js
+- So when we make an array const in js,it cant protect inside values getting changed by others
 
-//1
-// Providing MongoDB database to our todo app
+### 1
+###  Providing MongoDB database to our todo app
 //Create three default documents and insert them in ur items collections
 
-//2
-//Rendering Database items
+### 2
+### Rendering Database items
 //When user goes to homepage ,search the collection,if it is empty add default items and redirect to homepage else render the foundItems
 
-//3
-//Adding new items
+### 3
+### Adding new items
 listItem.save();
 
-//4
-//Deleting items from our items collection
+### 4
+### Deleting items from our items collection
+```js
 //req.body.checkbox value is either on or off
 <form  action="/delete" method="post">
   <div class="item">
@@ -1123,9 +1179,11 @@ Item.findByIdAndRemove(checkedItemId,function(err){
     res.redirect("/");
   }
 })
+```
 
-//5
-//Creating custom lists using Express route parameters
+### 5
+### Creating custom lists using Express route parameters
+```js
 app.get("/:customListName",function(req,res){
 const customListName=req.params.customListName;
 
@@ -1149,9 +1207,11 @@ List.findOne({name:customListName},function(err,foundListDocument){
   }
 
 })
+```
 
-//6
-//Deleting a document from a nested collection
+### 6
+### Deleting a document from a nested collection
+```js
 List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkedItemId}}},function(err,foundList){
   if(err){
     console.log(err);
@@ -1163,150 +1223,168 @@ List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkedItemId}}},functi
 
 //Capitalize the routing parameter/customListName using lodash
 _.Capitalize(string)
+```
 
-//7
-//Deploying web apps with a Database
-//http://localhost:3000,here http is the set of rules that govern how we transfer data across the internet to acess web webpages
-//mongodb://localhost:27017,here  we are using the mongodb rules which determines how you can access data in a mongoDB Database
-//depending on the isp they have strict rules regarding whether you can set up a server using your home internet plan
-//here we use heroku to host our node js app,and mongoDB own cloud service called Atlas to host our Database
+### 7
+### Deploying web apps with a Database
+- http://localhost:3000,here http is the set of rules that govern how we transfer data across the internet to acess web webpages
+- mongodb://localhost:27017,here  we are using the mongodb rules which determines how you can access data in a mongoDB Database
+- depending on the isp they have strict rules regarding whether you can set up a server using your home internet plan
+- here we use heroku to host our node js app,and mongoDB own cloud service called Atlas to host our Database
 
-//How to setup MongoDB Atlas
+- How to setup MongoDB Atlas
 
 
-//19)BLOG WEBSITE
-//Whenever u download/clone any project from github,use npm install in terminal to install all of its dependencies
-//Observe the examples in the bootstrap documentation
-//Express Routing Parameters
-//Instead of handling get req for every parameter,we can use express Routing params to do it dynamically
+### 19)BLOG WEBSITE
+- Whenever u download/clone any project from github,use npm install in terminal to install all of its dependencies
+- Observe the examples in the bootstrap documentation
+- Express Routing Parameters
+- Instead of handling get req for every parameter,we can use express Routing params to do it dynamically
+```js
 app.get("/news/:topic",function(req,res){
   console.log(req.params.topic);
 })
+```
+- `rs` //When we type this in terminal while the server is running,it will restart the server
+- //lodash is utility package
+- _.lowerCase("Nakka-Nithish") //nakka nithish
+- It ignores hypens and returns only pure lower case strings
+- in urls we use kebab case,but we store postTitles with first letter capitals
 
-rs //When we type this in terminal while the server is running,it will restart the server
-//lodash is utility package
-_.lowerCase("Nakka-Nithish") //nakka nithish
-//It ignores hypens and returns only pure lower case strings
-//in urls we use kebab case,but we store postTitles with first letter capitals
-
-//20)SQL
-//1
-//Databases Explained SQL(Structured Query Language) vs NOSQL(Not Only Structured Query Language)
-//Depending on the type of data that youre looking to store,and the structure of the data we choose Databases.
-//The main diff b/n Databases is whether they are sequel based or no sequel based
-//Top SQL Databases are MySQL and Postgres
-//Top NOSQL Databases are mongoDB and redis
-//SQL Databases stores data in tables
-//In sql databases for all cells that dont have a value will be inserted NULL,and NULL can be very dangerous
-//In nosql the data is stored as an array of Javascript objects,and it is helpful for startups where your datastructure is not predefined
-//Implementing relationships in nosql databases is difficult
-//sql and nosql databases are also called as Relational and Non-Relational Databases
-//In sql we put data in separated tables and we give connections between them with the help of ids,so in future we can combine them
-//In nosql we can also connect various documents ,ex:order document,person document,product documents
-//If your data need many relationships choose SQL
-//If your data has one to many relationship then choose NOSQL databases ex:one user to many posts
-//As the data increases sql database becomes slow,it is not scalable ,we will need powerful computer
-//Managing large amounts of data using sql database is like scaling a building vertically
-/*Where as in mongoDB each row is represented as a Javascript object,so instead of buying a poweful computer,it allows us a
+### 20)SQL
+### 1
+- Databases Explained SQL(Structured Query Language) vs NOSQL(Not Only Structured Query Language)
+- Depending on the type of data that youre looking to store,and the structure of the data we choose Databases.
+- The main diff b/n Databases is whether they are sequel based or no sequel based
+- Top SQL Databases are MySQL and Postgres
+- Top NOSQL Databases are mongoDB and redis
+- SQL Databases stores data in tables
+- In sql databases for all cells that dont have a value will be inserted NULL,and NULL can be very dangerous
+- In nosql the data is stored as an array of Javascript objects,and it is helpful for startups where your datastructure is not predefined
+- Implementing relationships in nosql databases is difficult
+- sql and nosql databases are also called as Relational and Non-Relational Databases
+- In sql we put data in separated tables and we give connections between them with the help of ids,so in future we can combine them
+- In nosql we can also connect various documents ,ex:order document,person document,product documents
+- If your data need many relationships choose SQL
+- If your data has one to many relationship then choose NOSQL databases ex:one user to many posts
+- As the data increases sql database becomes slow,it is not scalable ,we will need powerful computer
+- Managing large amounts of data using sql database is like scaling a building vertically
+- Where as in mongoDB each row is represented as a Javascript object,so instead of buying a poweful computer,it allows us a
 distrubuted system,so your database can be distrubuted among lot of different computers,so we scale horizontally*/
-//In case of a sql database we need to have a fixed schema before storing data,where mongoDB is more flexible to changes
-//mongoDB is not great with complex relationships
+- In case of a sql database we need to have a fixed schema before storing data,where mongoDB is more flexible to changes
+- mongoDB is not great with complex relationships
 
 
-//2
-//SQL Commands:CREATE Table and INSERT Data
-//We tend to write keywords in uppercase ex:SELECT,FROM etc.,
-//For every database the first thing to learn is CRUD operations, it means Create,Read,Update and Destroy data
-//Go to w3schools,it has best documentation for sql
-//Create table
+### 2
+### SQL Commands:CREATE Table and INSERT Data
+- We tend to write keywords in uppercase ex:SELECT,FROM etc.,
+- For every database the first thing to learn is CRUD operations, it means Create,Read,Update and Destroy data
+- Go to w3schools,it has best documentation for sql
+- Create table
+```sql
 CREATE TABLE products(
 id INT NOT NULL,
 name STRING,
 price MONEY,
 PRIMARY KEY (id)
 )
-//Insert data into it
+```
+- Insert data into it
+```sql
 INSERT into products VALUES (1,"Pen",1.2)
-INSERT into products(id,name) VALUES (2,"Pencil")
+INSERT into products(id,name) VALUES (2,"Pencil")```
 
-//3
-//SQL commands READ,SELECT and WHERE
+### 3
+### SQL commands READ,SELECT and WHERE
+```sql
 SELECT * FROM products
 SELECT * FROM products WHERE id=1
+```
 
-//4
-//Update Single Values and Adding Columns in SQL
+### 4
+### Update Single Values and Adding Columns in SQL
+```sql
 UPDATE products set price=0.8 WHERE id=2
 //If we want to add a new column to table,it means we need to alter the table
 ALTER table products add stock int
+```
 
-//5
-//DELETE
-//If we want to delete a record
+### 5
+### DELETE
+- If we want to delete a record
+```sql
 DELETE FROM products WHERE id=2
+```
 
-//6
-//Sql Relationships,Foreign keys
-//Each table should have a primary key
-//A foreign key of one table is a primary key of another table thats how we create connections
-//Later we use joins to form a table as our wish ex:inner join,left join and so on
-
-
-//21)MONGODB
-//Installing MongoDB on windows
-C:\Program Files\MongoDB\Server\6.0\data\
-vim filename //to edit with vim editor
-type i to enter insert mode
-esc to exit insert mode
-:wq! to save and exit vim
+### 6
+### Sql Relationships,Foreign keys
+- Each table should have a primary key
+- A foreign key of one table is a primary key of another table thats how we create connections
+- Later we use joins to form a table as our wish  - ex:inner join,left join and so on
 
 
-//MongoDB CRUD Operation in the shell: Create
-//In 6.0 mongoDB we need to install mongosh externally,and put that extracted folder in bin
-//In .bash_profile
+### 21)MONGODB
+### Installing MongoDB on windows
+- C:\Program Files\MongoDB\Server\6.0\data\
+- vim filename //to edit with vim editor
+- type i to enter insert mode
+- esc to exit insert mode
+- :wq! to save and exit v- 
+
+
+- MongoDB CRUD Operation in the shell: Create
+- In 6.0 mongoDB we need to install mongosh externally,and put that extracted folder in bin
+- In .bash_profile
+```bash
 alias mongod="/c/Program\ files/MongoDB/Server/6.0/bin/mongod.exe"
 alias mongo="/c/Program\ Files/MongoDB/Server/6.0/bin/mongosh-1.6.1-win32-x64/bin/mongosh.exe"
-/*once edited the .bash_profile using vim,we need to restart the terminal in order for the mongo
+```
+- once edited the .bash_profile using vim,we need to restart the terminal in order for the mongo
 shortcut to work*/
 
-mongod //it will starts the mongodb server that is connected to the local mongoDB database
-//Open a new terminal tab
-mongo //Opens a Mongo shell
+- `mongod` //it will starts the mongodb server that is connected to the local mongoDB database
+- //Open a new terminal tab
+- `mongo` //Opens a Mongo shell
 
-show dbs //shows the databases
-use shopDB //creates a database
-db //to know on which database u are currently in
+- `show dbs` //shows the databases
+- `use shopDB `//creates a database
+- `db` //to know on which database u are currently in
 
-db.products.insertOne({_id:1,name:"Pen",price:1.20}) //creates a collection and inserts one document in it
-db.products.insertMany()
+- `db.products.insertOne({_id:1,name:"Pen",price:1.20})` //creates a collection and inserts one document in it
+- `db.products.insertMany()`
 
-//a collection in mongoDB is like a table in sql world,and a document is like a row of the table
+- a collection in mongoDB is like a table in sql world,and a document is like a row of the table
 show collections //It will shows the collections present in the current db
 
 
-//Reading and Queries
+- Reading and Queries
+```js 
 db.products.find() //shows all the documents present inside that collection
 db.collection.find(query, projection, options) //Read documentation
-//here projection means the fields that we want to return
+```
+- here projection means the fields that we want to return
+```js
 db.products.find({name:"Pencil"}) //only query
 db.products.find({price:{$gt:1}}) //only query
 db.products.find({_id:1},{name:1}) //query and projection here we can use 1 or true
 [ { _id: 1, name: 'Pen' } ]
-//Whenever we use find,_id always comes by default,if we dont want it,we can set it to false in projection
-db.products.find({_id:1},{name:1,_id:0})
-[ { name: 'Pen' } ]
+```
+- Whenever we use find,_id always comes by default,if we dont want it,we can set it to false in projection
+`db.products.find({_id:1},{name:1,_id:0})
+[ { name: 'Pen' } ]`
 
 
-//Update
-db.products.updateOne({_id:1},{$set:{stock:32}})
+### Update
+`db.products.updateOne({_id:1},{$set:{stock:32}})
+`
+### Delete
+`db.products.deleteOne({_id:2})
+`
+- Relationships in MongoDB
+- There are two ways
+- First way is the most preferred method
 
-//Delete
-db.products.deleteOne({_id:2})
-
-//Relationships in MongoDB
-//There are two ways
-//First way is the most preferred method
-
+```js
 db.products.insert(
 {
 _id:3,
@@ -1325,82 +1403,99 @@ review:"Awesome rubber!"
 ]
 }
 )
+```
 
-//This way of embedding documents inside another document is suitable for one to many relationships
-//One product will have many reviews
-//One user will create many comments
+- This way of embedding documents inside another document is suitable for one to many relationships
+- One product will have many reviews
+- One user will create many comments
 
-//Another format we might see out there in the wild is,we might have two product documents
+- Another format we might see out there in the wild is,we might have two product documents
 and we could create another collection say a collection of orders and for each document in that
 orders collection we might have like shown below
-//products collection
+- products collection
+```js
 [
   { _id: 1, name: 'Pen', price: 1.2, stock: 32 },
   { _id: 2, name: 'Pencil', price: 0.8, stock: 12 }
 ]
-//orders collection
+```
+- orders collection
+```js
 [
   {orderNumber:3243,productsOrdered:[1,2]}
 ]
-
-//Working with the Native MonogDB driver
-//until now we have seen how to use mongoDB in an isolated setting ie., in command line through mongoshell
-//We need to learn how to integrate MongoDB database in Nodejs application
-//Two ways to do this
-//One way is to use MongoDB native driver
-//Another way is to use ODM(Object Document Mapper) thats called mongoose
-/*mongoose is popular because it vastly simplifies and cuts down the code that required in order to
+```
+- Working with the Native MonogDB driver
+- until now we have seen how to use mongoDB in an isolated setting ie., in command line through mongoshell
+- We need to learn how to integrate MongoDB database in Nodejs application
+- Two ways to do this
+- One way is to use MongoDB native driver
+- Another way is to use ODM(Object Document Mapper) thats called mongoose
+- mongoose is popular because it vastly simplifies and cuts down the code that required in order to
 work with the mongoDB database*/
 
-//How the Native MongoDB driver works
-//Read Node.js Driver documentation
-npm init -y //initialize npm and accept all the defaults
-//In reality most developers who are working with node and mongoDB will rarely use Native mongoDB driver
-/*Native mongoDB allows a lot of personalization and you can drill down to the specifics and u can set up and use MongoDB database
+- How the Native MongoDB driver works
+- Read Node.js Driver documentation
+- `npm init -y` //initialize npm and accept all the defaults
+- In reality most developers who are working with node and mongoDB will rarely use Native mongoDB driver
+- Native mongoDB allows a lot of personalization and you can drill down to the specifics and u can set up and use MongoDB database
 with a high level of control*/
 
 
-//22)NATIVE MONGODB DRIVER
+### 22)NATIVE MONGODB DRIVER
 
 
-//23)MONGOOSE
+### 23)MONGOOSE
 
-//336)Introduction to Mongoose
-//Mongoose is called ODM(Object Document Mapper)
-//It allows our Nodejs app which speaks the language of js objects to be able to talk to MongoDB database
-//which speaks in the language of documents and collections and databases.
-db.dropDatabase() //Drops/deletes a database
-npm install mongoose
+### 336)Introduction to Mongoose
+- Mongoose is called ODM(Object Document Mapper)
+- It allows our Nodejs app which speaks the language of js objects to be able to talk to MongoDB database
+- which speaks in the language of documents and collections and databases.
+- `db.dropDatabase()` //Drops/deletes a database
+- `npm install mongoose`
 
+```js
 const mongoose=require("mongoose");
+```
 
+```js
 mongoose.set('strictQuery', false);
-//connects to fruitsDB database
+- connects to fruitsDB database
 mongoose.connect('mongodb://127.0.0.1:27017/fruitsDB');
+```
 
-//Create a schema
+- Create a schema
+```js
 const fruitSchema=new mongoose.Schema({
   name:String,
   rating:Number,
   review:String
 });
-
-//Create a model using that Schema
+```
+- Create a model using that Schema
+```js
 const Fruit=new mongoose.model("Fruit",fruitSchema);  //We can assume this model as our collection
-//Above line Creats a collection called fruits by pluralizing and dropping the capital F of the Fruit
-//Its actually using lodash to achieve this
+```
+- Above line Creats a collection called fruits by pluralizing and dropping the capital F of the Fruit
+- Its actually using lodash to achieve this
 
-//Create a document using that model
-const fruit=new Fruit({
+- Create a document using that model
+```js
+const fruitjs
+=new Fruit({
   name:"Apple",
   rating:7,
   review:"Pretty solid as a fruit"
 });
+```
 
-//Save to the fruits collection
+- Save to the fruits collection
+```js
 fruit.save();
+```
 
-//Inserting many documents at a time using model(mongoose docs>API>Model)
+- Inserting many documents at a time using model(mongoose docs>API>Model)
+```js
 Fruit.insertMany([kiwi,orange,banana],function(err){
   if(err){
     console.log(err);
@@ -1408,9 +1503,11 @@ Fruit.insertMany([kiwi,orange,banana],function(err){
     console.log("successfully saved all the fruits to fruitsDB");
   }
 });
+```
 
-//2
-//Reading from the database
+### 2
+### Reading from the database
+```js
 Fruit.find({},function(err,fruits){  //{} no condition means find everything
   if(err){
     console.log(err);
@@ -1418,13 +1515,15 @@ Fruit.find({},function(err,fruits){  //{} no condition means find everything
     console.log(fruits);
   }
 });
-//Its good practice to close our database connection once we are done with it
+```
+- Its good practice to close our database connection once we are done with it
 mongoose.connection.close();
 
-//3
-//Data Validation with Mongoose
-//Mongoose makes the Validation of data entry a lot easier,instead of writing our own assert statements all over the place and specifying specific things
-//We can actually use Mongooses built in Validation checks to make it a lot easier and a lot quicker to use
+### 3
+### Data Validation with Mongoose
+- Mongoose makes the Validation of data entry a lot easier,instead of writing our own assert statements all over the place and specifying specific things
+- We can actually use Mongooses built in Validation checks to make it a lot easier and a lot quicker to use
+```js
 const fruitSchema=new mongoose.Schema({
   name:{
     type:String,
@@ -1437,11 +1536,13 @@ const fruitSchema=new mongoose.Schema({
   },
   review:String
 });
+```
 
-//Validation keeps our data clean in a format that we expect it to be
+- Validation keeps our data clean in a format that we expect it to be
 
-//4
-//Update and Delete Data using Mongoose
+### 4
+### Update and Delete Data using Mongoose
+```js
 Fruit.updateOne({_id:"63aaf44e2368875c27fc2dc4"},{name:"Mango"},function(err){ //Filter,update and callback
   if(err){
     console.log(err);
@@ -1449,8 +1550,9 @@ Fruit.updateOne({_id:"63aaf44e2368875c27fc2dc4"},{name:"Mango"},function(err){ /
     console.log("successfully updated");
   }
 });
+```
 
-//Deleting a particular Document
+### Deleting a particular Document
 Fruit.deleteOne({name:"Peach"},function(err){  //model.deleteMany()
   if(err){
     console.log(err);
@@ -1459,21 +1561,24 @@ Fruit.deleteOne({name:"Peach"},function(err){  //model.deleteMany()
   }
 });
 
-//5
-//Establishing Relationships and Embedding Documents into each other
-//We have two collections,People and Fruits
-//What if John inside of People collection have a favourite fruit,which embeds a fruit document from our fruits collection
-//We would do it by establishing a relationship
+### 5
+### Establishing Relationships and Embedding Documents into each other
+- We have two collections,People and Fruits
+- What if John inside of People collection have a favourite fruit,which embeds a fruit document from our fruits collection
+- We would do it by establishing a relationship
 
-//We cant simply embed fruit by saying Person.updateOne() and add a field thats not specified in the Schema
-//So first we need to specify it in the personSchema
+- We cant simply embed fruit by saying Person.updateOne() and add a field thats not specified in the Schema
+- So first we need to specify it in the personSchema
+```js
 const personSchema=new mongoose.Schema({
   name:String,
   age:Number,
   favouriteFruit:fruitSchema
 });
+```
 
 
+```js
 const Person=new mongoose.model("Person",personSchema);
 
 const person=new Person({
@@ -1484,43 +1589,45 @@ const person=new Person({
 person.save();
 
 //Now the person inside people collection have a relationship with a fruit inside fruits collection
+```
 
-
-//24)RESTful API
-//Build your own RESTful API
+### 24)RESTful API
+### Build your own RESTful API
 
 Client<---->Server<----->DataBase
 
-//1
-//REST stands for Representational State Transfer
-//If the server encounters a req(HTTP request) that cant be fullfilled it gives error 404(resource doesnt exist)
-//Hyper text transfer protocol(Http) is not the only language that servers can speak,we also have FTP Request(File Transfer Protocol)
-//HTTPS stands for HTTP secure request,any one can tap into the req,res that are going across the internet and can be tapped by lots of people.
-//So we can use cryptography and encrypt our request.
-/*There is only a certain amount of things that the server can do,the server will have a whole bunch of APIs which are the services that it can
+### 1
+### REST stands for Representational State Transfer
+- If the server encounters a req(HTTP request) that cant be fullfilled it gives error 404(resource doesnt exist)
+- Hyper text transfer protocol(Http) is not the only language that servers can speak,we also have FTP Request(File Transfer Protocol)
+- HTTPS stands for HTTP secure request,any one can tap into the req,res that are going across the internet and can be tapped by lots of people.
+- So we can use cryptography and encrypt our request.
+- There is only a certain amount of things that the server can do,the server will have a whole bunch of APIs which are the services that it can
 expose the clients to tap into*/
 
-//REST is just an architectural style for designing APIs ,and its not the only architectural style we have.
-//We have SOAP,GraphQL,FALCOR and theres a lot of other architectural styles
-//REST proposes a set of rules that web developers could follow when theyre building their APIs.
-/*If every web API was built using the same common guiding principles then it would be so easy for everybody to work together and be able to use different
+- REST is just an architectural style for designing APIs ,and its not the only architectural style we have.
+- We have SOAP,GraphQL,FALCOR and theres a lot of other architectural styles
+- REST proposes a set of rules that web developers could follow when theyre building their APIs.
+- If every web API was built using the same common guiding principles then it would be so easy for everybody to work together and be able to use different
 APIS quickly,easily and efficiently*/
-/*Important rules to follow to make our API restful*/
-//1)Use the HTTP request verbs
-//2)Use specific pattern of routes/endpoint URLs
+- Important rules to follow to make our API restful*/
+  * Use the HTTP request verbs
+  * Use specific pattern of routes/endpoint URLs
 
-//HTTP request verbs are
-get     -Read from the database
-post 	-Create some data in the database
-put							      -Update some data in the database(It replaces the entire entry/document)
-patch(it was added to the HTTP request language very recently)-Update some data in the database(It only replaces the certain piece of the entry/document)
-delete  - Deletes a particular piece of data in the database
+HTTP request verbs are
 
-//specific pattern of routes/endpoint URLs
+- ***get***     -Read from the database
+- ***post*** 	-Create some data in the database
+- ***put***							      -Update some data in the database(It replaces the entire entry/document)
+- ***patch***(it was added to the HTTP request language very recently)-Update some data in the database(It only replaces the certain piece of the entry/document)
+- ***delete***  - Deletes a particular piece of data in the database
+
+
+- specific pattern of routes/endpoint URLs
 ex:www.google.com/elephants
 www.google.com/camels etc.,
 
-//RESTful routing
+- RESTful routing
 
 HTTP verbs		/articles		               /articles/jack-bauer
 
@@ -1535,12 +1642,13 @@ PATCH			        -		                  Updates the article on jack-bauer
 DELETE		Deletes all the articles	    Deletes the article on jack-bauer
 
 
-//2
-//Creating a database with Robo 3T
-//We are going to create a wikipedia style api
-//Robo 3T is a gui to work with a mongodb database
-//Create a new database called wikiDB>create a collection called articles>insert the documents
+### 2
+### Creating a database with Robo 3T
+- We are going to create a wikipedia style api
+- Robo 3T is a gui to work with a mongodb database
+- Create a new database called wikiDB>create a collection called articles>insert the documents
 
+```json
 {
     "_id" : ObjectId("5c139771d79ac8eac11e754a"),
     "title" : "API",
@@ -1560,13 +1668,14 @@ DELETE		Deletes all the articles	    Deletes the article on jack-bauer
     "title" : "DOM",
     "content" : "The Document Object Model is like an API for interacting with our HTML"
 }
+```
+- Set up server
 
-//Set up server
+- Lets implement everything that is present in the table
 
-//Lets implement everything that is present in the table
-
-//3
-//Get All Articles
+### 3
+### Get All Articles
+```js
 //In case of err its better to send it to client
 app.get("/articles",function(req,res){
   Article.find(function(err,foundArticles){
@@ -1577,18 +1686,20 @@ app.get("/articles",function(req,res){
     }
   })
 });
+```
 
 
-//4
-//Post a new Article
-/*Here the client sends a piece of data to the server,but here we dont have a web form,then how can we build our API without the need for building the frontend*/
-/*Here comes a handy tool called postman,it helps us to test our api without building the frontend at all*/
-/*We have our server that can speak to the database and were exposing certain parts of our server through the APIs were
+### 4
+### Post a new Article
+- Here the client sends a piece of data to the server,but here we dont have a web form,then how can we build our API without the need for building the frontend*/
+- Here comes a handy tool called postman,it helps us to test our api without building the frontend at all*/
+- We have our server that can speak to the database and were exposing certain parts of our server through the APIs were
 building,so that clients can be able to work with our database*/
-/*Here client can be a number of things,a browser trying to load up a web page, it makes a get req and the server sends relevant html,css and js files*/
-/*Here client can also make a get req that is looking for a particular resourse say some data or a file*/
+- Here client can be a number of things,a browser trying to load up a web page, it makes a get req and the server sends relevant html,css and js files*/
+- Here client can also make a get req that is looking for a particular resourse say some data or a file*/
 
-//go to postman>body>enter the data with the respective keys to access them in our app.js
+- go to postman>body>enter the data with the respective keys to access them in our app.js
+```js
 app.post("/articles",function(req,res){
   const newArticle=new Article({
     title:req.body.title,
@@ -1602,11 +1713,13 @@ app.post("/articles",function(req,res){
     }
   });
 });
-//we can add a callback to save() method to tell the client whether the post req is successful or not.
+```
+- we can add a callback to save() method to tell the client whether the post req is successful or not.
 
 
-//5
-//Delete All Articles
+### 5
+### Delete All Articles
+```js
 app.delete("/articles",function(req,res){
   Article.deleteMany(function(err){
     if(!err){
@@ -1622,10 +1735,12 @@ app.route("/articles")
    .get()
    .post()
    .delete();
+```
 
 
-//6
-//Get a Specific Article
+### 6
+### Get a Specific Article
+```js
 app.route("/articles/:articleTitle")
    .get(function(req,res){
      Article.findOne({title:req.params.articleTitle},function(err,foundArticles){ //here Jack%20Bauer is decoded as Jack Bauer
@@ -1636,17 +1751,19 @@ app.route("/articles/:articleTitle")
        }
      });
    });
+```
 
-//If we want to access the title with space in it,for example, Jack Bauer ,then in url encoding the space is represented as %20
-//Search html url encoding and see w3schools.
+- If we want to access the title with space in it,for example, Jack Bauer ,then in url encoding the space is represented as %20
+- Search html url encoding and see w3schools.
 
-//7
-//Put a Specific Article
-//Put req is like replacing the entire bicycle(from that amazon example)
+### 7
+### Put a Specific Article
+- Put req is like replacing the entire bicycle(from that amazon example)
 
-/*By default if we were to update our document using MongoDB,then overwrite is already enabled,and it will overwrite the document
+- By default if we were to update our document using MongoDB,then overwrite is already enabled,and it will overwrite the document
 if you dont include all of the fields in your update*/
-/*But by default mongoose will prevent properties being overwritten and deleted*/
+- But by default mongoose will prevent properties being overwritten and deleted*/
+    ```js
     .put(function(req,res){
         Article.updateOne({title:req.params.articleTitle},
           {$set: {title:req.body.title,content:req.body.content}},
@@ -1672,6 +1789,9 @@ if you dont include all of the fields in your update*/
           }
         }
       );
+      
+    ```
+```js
   // Article.update(    //Its saying Article.update() is deprecated
   //   {title:req.params.articleTitle},
   //   {title:req.body.title,content:req.body.content},
@@ -1683,13 +1803,15 @@ if you dont include all of the fields in your update*/
   //   }
   // );
   //});
+  ```
 
 
-//8
-//Patch a specific article
-//If you want to only want to update a specific field in a specific document then the HTTP method that we should be using is patch();
+### 8
+### Patch a specific article
+- If you want to only want to update a specific field in a specific document then the HTTP method that we should be using is patch();
 
-//9
+- 9
+```js
 .patch(function(req, res) {
   Article.updateOne({
       title: req.params.articleTitle
@@ -1703,9 +1825,11 @@ if you dont include all of the fields in your update*/
     }
   );
 })
+```
 
-//10
-//Delete a specific article
+### 10
+### Delete a specific article
+```js
 .delete(function(req, res) {
   Article.deleteOne({
     title: req.params.articleTitle
@@ -1718,31 +1842,33 @@ if you dont include all of the fields in your update*/
   });
 });
 
+```
 
-//25)WIKI-API
+### 25)WIKI-API
 
-//26)SECRETS WEB APP
+### 26)SECRETS WEB APP
 
-//1
-//Introduction to Authentication
-//Why Authentication?
-/*When a user uses our web app,they starts generating data,so in order to associate those pieces of data with individual users we
+### 1
+### Introduction to Authentication
+- Why Authentication?
+- When a user uses our web app,they starts generating data,so in order to associate those pieces of data with individual users we
 need to create an account for each user so that they would sign up to our website using a username and password and we create like an id card
 for them to uniquely identify them on our database and to save all the data they generate on to that account*/
-/*To restrict access to certain areas of the website depending on the status of the user,for ex take netflix/spotify if they paid for a subscription
+- To restrict access to certain areas of the website depending on the status of the user,for ex take netflix/spotify if they paid for a subscription
 then we update their account in our database and let them access to the tv shows or songs*/
-/*The difficult part of Authentication comes from how secure youre going to make your website*/
-/*We go from creating an account,adding the user to our database,saving their username and password to enable them to log in,
+- The difficult part of Authentication comes from how secure youre going to make your website*/
+- We go from creating an account,adding the user to our database,saving their username and password to enable them to log in,
 all the way up to covering thing such as OAuth and social logins including creating things such as sessions,cookies and hashing and encrypting passwords */
-//We can add 6 levels of security to our website
-//If you want u can see all of these 6 levels code,go to angela resourses
+- We can add 6 levels of security to our website
+- If you want u can see all of these 6 levels code,go to angela resours### 
 
 
-//2
-//Lets add some Authentication to our website
-//Level 1 security-Register users with username and password
-//Here we dont have a direct get req to secets page,we send it only if the user registers by entering email and password
-//we can add callback to save() method
+### 2
+### Lets add some Authentication to our website
+- Level 1 security-Register users with username and password
+- Here we dont have a direct get req to secets page,we send it only if the user registers by entering email and password
+- we can add callback to save() method
+```js
 app.post("/register",function(req,res){
   const newUser=new User({
     email:req.body.username,
@@ -1756,8 +1882,10 @@ app.post("/register",function(req,res){
     }
   });
 });
+```
 
-//login to the website
+- login to the website
+```js
 app.post("/login",function(req,res){
   const username=req.body.username;
   const password=req.body.password;
@@ -1773,46 +1901,52 @@ app.post("/login",function(req,res){
     }
   });
 });
+```
 
-//Here there is one problem
-/*We stored all our passwords in plain text and any one of my employees can look through my database and know
+- Here there is one problem
+- We stored all our passwords in plain text and any one of my employees can look through my database and know
 what everybodys passwords,and also if hacker hack into my server and locate my database this is a pretty big loot for them */
-//So dont store your users passwords in plain text
+- So dont store your users passwords in plain text
 
-//3
-//Level 2 Authentication- Database Encryption
-//Caesar Cipher is one of the earliest ways of encrypting messages that we know
-//     A B C D E f
-// A B C D E f      //here the shift is 2
+### 3
+### Level 2 Authentication- Database Encryption
+- Caesar Cipher is one of the earliest ways of encrypting messages that we know
+-      A B C D E f
+-  A B C D E f      //here the shift is 2
 
-//cryptii.com
+- cryptii.com
 
-//All encryptions work the same way,we have a way of scramling a message and we require a key to unscramble the message
-//We use mongoose-encryption package to encrypt any data in our database
-//Theres two ways of going about encrypting your database using this mongoose-encryption package
-//One way is to create encKey and sigKey (read documentation)
-//Another way, which is a convenient method,we simply use a long unguessable Secret String Instead of Two Keys
+- All encryptions work the same way,we have a way of scramling a message and we require a key to unscramble the message
+- We use mongoose-encryption package to encrypt any data in our database
+- Theres two ways of going about encrypting your database using this mongoose-encryption package
+- One way is to create encKey and sigKey (read documentation)
+- Another way, which is a convenient method,we simply use a long unguessable Secret String Instead of Two Keys
 
-const secretString="ILovewatchingAnime."      //creating a secret long unguessable Secret
+- `const secretString="ILovewatchingAnime."`      //creating a secret long unguessable Secret
+```js
 userSchema.plugin(encrypt,{secret:secretString}); //Adding our mongoose-encryption package as a plugin to the userSchema
-//plugins are just extra bits of packaged code that you can add to the mongoose schemas to extend their functionality or give them more powers
+```
+- plugins are just extra bits of packaged code that you can add to the mongoose schemas to extend their functionality or give them more powers
 
+```js
 userSchema.plugin(encrypt,{secret:secretString}); //This will encrypt all of the document fields
 userSchema.plugin(encrypt,{secret:secretString,encryptedFields: ['fieldName','fieldName']}); //To encrypt only certain fields
+```
 
-//mongoose-encryption works in a way that it will encrypt whem we call save() and it will decrypt when we call find()
-/*This means that if somebody hack into your website they can easily access the app.js and our secretString and they can use the
+- mongoose-encryption works in a way that it will encrypt whem we call save() and it will decrypt when we call find()
+- This means that if somebody hack into your website they can easily access the app.js and our secretString and they can use the
 same package to decrypt all the passwords*/
 
-//4
-//Using Environment variables to keep secrets safe
-//Imagine if we put our project in github ,any one can see this secret string or any other api keys we have
-//And using this secret key they can decrypt our entire database
-//A lot of hackers scrape the internet for developers who have accidently published their secret keys/api keys
-//Environment variables is a simple file where we keep our sensitive variables such as encryption keys and api keys
-//We use a popular package called dotenv
-
-npm install dotenv
+### 4
+### Using Environment variables to keep secrets safe
+- Imagine if we put our project in github ,any one can see this secret string or any other api keys we have
+- And using this secret key they can decrypt our entire database
+- A lot of hackers scrape the internet for developers who have accidently published their secret keys/api keys
+- Environment variables is a simple file where we keep our sensitive variables such as encryption keys and api keys
+- We use a popular package called dotenv
+- `npm install dotenv
+`
+```js
 
 require('dotenv').config()  //Add this line right at the top in app.js
 //Create a .env file in your project root directory
@@ -1823,33 +1957,37 @@ API_KEY=fsdfkhdfghgjsdfjsfjjdf
 //you can access them like This
 process.env.SECRET
 process.env.API_KEY
+```
 
-//Create a .gitignore file and copy paste node project gitignore template
+- Create a .gitignore file and copy paste node project gitignore template
 
-//github works on version control basis
-//So the first thing you should do when you start a project is create a .env file and add it to .gitignore
-//when we deploy on heroku they actually have a specific way of handling this config vars
+- github works on version control basis
+- So the first thing you should do when you start a project is create a .env file and add it to .gitignore
+- when we deploy on heroku they actually have a specific way of handling this config vars
 
-//5
-//Level 3 - Hashing Passwords
-//At this moment the biggest flaw in our Authentication method is that we have an encryption key
-/*So some body is motivated enough to hack into your server/database then its not that difficult for them to get your encryption key,
+### 5
+### Level 3 - Hashing Passwords
+- At this moment the biggest flaw in our Authentication method is that we have an encryption key
+- So some body is motivated enough to hack into your server/database then its not that difficult for them to get your encryption key,
 even if you put it in your Environment variable or somewhere secure on your server*/
-//Here hashing comes into picture
-/*Hash functions are mathematical equations that are designed to make it almost impossible to go backwords,so its almost impossible
+- Here hashing comes into picture
+- Hash functions are mathematical equations that are designed to make it almost impossible to go backwords,so its almost impossible
 to turn a hash back into password*/
-//ex:finding factors of 377 otherthan 1 and itself is kinda difficult
-//But we can easily multiply 13 and 29 and get 377
-//This is a simple version of hash functions
+- ex:finding factors of 377 otherthan 1 and itself is kinda difficult
+- But we can easily multiply 13 and 29 and get 377
+- This is a simple version of hash functions
 
-npm install md5    //md5 stands for Message-Digest algorithm 5
+- `npm install md5 `   //md5 stands for Message-Digest algorithm 5
 
+```js
 var md5 = require('md5');
 
 console.log(md5('message'));
+```
 
-//When the users register we store the hash of thier password
-//When the users login we convert their entered password into hash and compare it against the stored hash
+- When the users register we store the hash of thier password
+- When the users login we convert their entered password into hash and compare it against the stored hash
+```js
 app.post("/register",function(req,res){
   const newUser=new User({
     email:req.body.username,
@@ -1879,64 +2017,67 @@ app.post("/login",function(req,res){
     }
   });
 });
-
-//But hashing also comes along with its own problems
-
-
-//6
-//Hacking 101
-//If we can see passwords in plaintext means the security methods they follow are horrible
-
-//How passwords are hacked
-//Hackers convert most of the commonly used passwords into their hashes and creats a hash table
-//Now they compare the hacked database passwords hashes with the hash table they made
-//what if they use their date of birth of their pets name
-//How they make hash tables
-//All words from a dictionary(Dictionary Attack)
-//All numbers from a telephone book
-//All combinations of characters up to 6 places
-//All of these combine will be upto 19.8 billion combinations(can be calculated in 0.9 seconds)
-
-//They buy latest gpus/graphics cards which are capable of parallel processing
-//with one of the latest gpus you can calculate about 20 billion md5 hashes/second
-//md5 is one of the quickest hashes to calculate
-//The longer the password,the difficult it is to crack it
+```
+- But hashing also comes along with its own problems
 
 
-//7
-//Hashing passwords with bcrypt and Salting
+### 6
+### Hacking 101
+- If we can see passwords in plaintext means the security methods they follow are horrible
+
+- How passwords are hacked
+- Hackers convert most of the commonly used passwords into their hashes and creats a hash table
+- Now they compare the hacked database passwords hashes with the hash table they made
+- what if they use their date of birth of their pets name
+- How they make hash tables
+- All words from a dictionary(Dictionary Attack)
+- All numbers from a telephone book
+- All combinations of characters up to 6 places
+- All of these combine will be upto 19.8 billion combinations(can be calculated in 0.9 seconds)
+
+- They buy latest gpus/graphics cards which are capable of parallel processing
+- with one of the latest gpus you can calculate about 20 billion md5 hashes/second
+- md5 is one of the quickest hashes to calculate
+- The longer the password,the difficult it is to crack it
+
+
+### 7
+- Hashing passwords with bcrypt and Salting
                     salt               Hash
-password + random set of characters--------------->Hash
+  password + random set of characters--------------->Hash
                                      function
 
-//We store the salt in the database along with the hash
-/*So when the user enters the password we generate the hash combining that stored salt and compare the hash generated
+- We store the salt in the database along with the hash
+- So when the user enters the password we generate the hash combining that stored salt and compare the hash generated
 against the stored hash*/
-// 20,000,000,000 md5 hashes/second
-// 17,000 bcrypt hashes/second
+-  20,000,000,000 md5 hashes/second
+-  17,000 bcrypt hashes/second
 
-//bcrypt is one of the industry standard hashing algorithms that developers use to keep their users passwords safe
-//We also use salt rounds,the more the salt rounds,the saltier the passwords become
-//So as the cpu power increase(according to moores law),we increase the number of salt rounds
-//The database might look like this
+- bcrypt is one of the industry standard hashing algorithms that developers use to keep their users passwords safe
+- We also use salt rounds,the more the salt rounds,the saltier the passwords become
+- So as the cpu power increase(according to moores law),we increase the number of salt rounds
+- The database might look like this
 username                  Salt                       Hash*10
 
-//bcrypt package supports stable versions commonly
-//So it is recommended to use the latest stable version,see LTS version in node official website
-//how can we change the version of node that we already installed
-//We use something called nvm(node version manager),go to nvm git repo and copy paste the nvm installation link in terminal
+- bcrypt package supports stable versions commonly
+- So it is recommended to use the latest stable version,see LTS version in node official website
+- how can we change the version of node that we already installed
+- We use something called nvm(node version manager),go to nvm git repo and copy paste the nvm installation link in terminal
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 nvm install 10.15.0 //example
 
-/*With every npm package there will be a link to the git repo where the code is hosted,and there we can explore the
+- With every npm package there will be a link to the git repo where the code is hosted,and there we can explore the
 issues people having while they are trying to use this repository*/
 
+```bash
 npm i bcrypt@versionnumber
 npm install bcrypt@5.1.0 /*or simply*/ npm i bcrypt
-//My advice is change node to latest LTS version and also install bcrypt latest version
+```
+- My advice is change node to latest LTS version and also install bcrypt latest version
 const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
+```js
 //bcrypt.hash() to store
 app.post("/register",function(req,res){
   bcrypt.hash(req.body.password, saltRounds, function(err, hash) {
@@ -1975,50 +2116,54 @@ app.post("/login",function(req,res){
     }
   });
 });
+```
 
-//8
-//Level 5 Authentication
-//COOKIES AND SESSIONS
-//These cookies in web development are like fortune cookies,cuz they have a msg in them and they can be broken to reveal the message
-/*Imagine if you go to amazon and add an item to your cart and immediatly u got distracted and go to another website abandoning
+### 8
+### Level 5 Authentication
+- COOKIES AND SESSIONS
+- These cookies in web development are like fortune cookies,cuz they have a msg in them and they can be broken to reveal the message
+- Imagine if you go to amazon and add an item to your cart and immediatly u got distracted and go to another website abandoning
 amazon,well what does amazon do? as soon as u added that item in your cart amazon has created a cookie and it stored that cookie
 stores that cookie in our browser*/
-//go to settings and search for cookies
-/*cookies are used to save our browsing sessions,cookies are also used for retargetting ads,means they remind about that product
+- go to settings and search for cookies
+- cookies are used to save our browsing sessions,cookies are also used for retargetting ads,means they remind about that product
 when u go to other websites*/
-/*When we add a computer to our basket in amazon,it makes a post req to amazon server,and at this moment the amazon server creates
+- When we add a computer to our basket in amazon,it makes a post req to amazon server,and at this moment the amazon server creates
 a cookie like this user wants to buy a computer and send that cookie back to browser along with the post response and the browser
 is told to save that cookie*/
-/*So tomorrow if u again visit amazon that cookie stored in ur browser is sent along with your get request,and the server identifies
+- So tomorrow if u again visit amazon that cookie stored in ur browser is sent along with your get request,and the server identifies
 u and sees if u have any previous sessions,its like cracking open the fortune cookie*/
-/*There are a lot of different types of cookies,but the type of cookies we are looking at are the ones used to establish and
+- There are a lot of different types of cookies,but the type of cookies we are looking at are the ones used to establish and
 maintain a session(session cookies) */
-/*A session is a period of time when a browser interacts with a server */
-/*Usually when u login to a website thats when ur session starts and thats when ur fortune cookie gets created and inside that
+- A session is a period of time when a browser interacts with a server */
+- Usually when u login to a website thats when ur session starts and thats when ur fortune cookie gets created and inside that
 fortune cookie you will have your user credentials that says this user is logged and has been successfully authenticated,so that
 means as you continued to browse the website you wont be asked to login again when you try to access a page that requires Authentication
 because they can always check against that active cookie you have on your browser and it maintains your authentication for this
 browsing session until the point when you log out which is when this session ends and the cookie thats related to the session gets
 destroyed*/
 
-/*We will implement cookies and sessions into our wesite and and we do it using Passport*/
-/*Passport allows you to authenticate ur users using either a local strategy like what were doing right now which is username and
+- We will implement cookies and sessions into our wesite and and we do it using Passport*/
+- Passport allows you to authenticate ur users using either a local strategy like what were doing right now which is username and
 password or use a whole bunch of other services such as google,facebook,linkdin and twitter, and it makes it a lot easier for you
 to be able to plug these different ways of authentication into your website*/
 
-//Using Passport.js to add cookies and sessions
-//Packages we will use
+- Using Passport.js to add cookies and sessions
+- Packages we will use
 passport
 passport-local
 passport-local-mongoose
 express-session
 
-//install all of these Packages
+- install all of these Packages
 
+```js
 const session=require('express-session');
 const passport=require('passport');
 const passportLocalMongoose=require('passport-local-mongoose') //passport-local is a added as a dependency of this,so we dont have to require it again
+```
 
+```js
 //lets setup/initialize a session with some initial configuration by passing some options
 app.use(session({
   secret:"I Love watching Anime.",
@@ -2031,20 +2176,21 @@ app.use(passport.initialize());
 app.use(passport.session()); //to manage those sessions using passport
 //place the above three above mongoose.connect()
 userSchema.plugin(passportLocalMongoose); //using this we salt and hash our passwords and to save our users into our MongoDB database
+```
 
-//passport-local configuration
-/*Create a strategy which is gonna be the local strategy to authenticate users using their username and password and also to
+- passport-local configuration
+- Create a strategy which is gonna be the local strategy to authenticate users using their username and password and also to
 serialise and deserialise our user*/
-/*The serialise and deserialise is only necessary when we are using sessions and what it does is*/
-/*serialise - it creates a fortune cookie and stuffs the message namely our users identifications into the cookie*/
-/*deserialise - it basically allows passport to crumble the cookie and discover the message inside, which is who this user is
+- The serialise and deserialise is only necessary when we are using sessions and what it does is*/
+- serialise - it creates a fortune cookie and stuffs the message namely our users identifications into the cookie*/
+- deserialise - it basically allows passport to crumble the cookie and discover the message inside, which is who this user is
 and all of their identification so that we can authenticate them on our server*/
 
-/*Normally if u just use passport and passport-local u would have to write a lot more code,but because were using passport-local-mongoose ,
+- Normally if u just use passport and passport-local u would have to write a lot more code,but because were using passport-local-mongoose ,
 its going to take care of a lot that in between code for us*/
 
-/*We just need to do is just add these three lines of code from passport-local-mongoose documentation,right below where we create our new mongoose model*/
-passport.use(User.createStrategy()); //to create a local login strategy
+- We just need to do is just add these three lines of code from passport-local-mongoose documentation,right below where we create our new mongoose model*/
+```j- passport.use(User.createStrategy()); //to create a local login strategy
 
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -2087,13 +2233,14 @@ app.post("/login",function(req,res){
     }
   });
 });
-
-/*Both when they successfully registered or successfully logged in usig the right credentials,we are going to send a cookie
+```
+- Both when they successfully registered or successfully logged in usig the right credentials,we are going to send a cookie
 and tell the browser to hold onto that cookie because the cookie has a few pieces of information that tells our server about
 the user,namely that they are authorized to view any of the pages that require authentication*/
-/*Simply when they make post req to reg/login ,using right username and password,then a cookie is send to store on their
+- Simply when they make post req to reg/login ,using right username and password,then a cookie is send to store on their
 browser,that cookie is send to server whenever they make a get req to any of the page that require authentication */
 
+```js
 //Lets add a logout route
 app.get("/logout",function(req,res){
   //this logout() belongs to passport package
@@ -2102,61 +2249,63 @@ app.get("/logout",function(req,res){
       res.redirect('/');
     });
 });
+```
 
 
 
-//9
-//Level 6 OAuth 2.0 & How to implement sign in with google
-//Third Party OAuth2.0
-/*OAuth - Open Authorisation ----> It is simply a open standard for token based authorization*/
-/*Lets imagine we are creating an app called bracebook which is like a facebook for people with braces for teeth*/
-/*When u are a new user u might not have any friends in bracebook,so what we can do as the developers of bracebook is we
+### 9
+### Level 6 OAuth 2.0 & How to implement sign in with google
+- Third Party OAuth2.0
+- OAuth - Open Authorisation ----> It is simply a open standard for token based authorization*/
+- Lets imagine we are creating an app called bracebook which is like a facebook for people with braces for teeth*/
+- When u are a new user u might not have any friends in bracebook,so what we can do as the developers of bracebook is we
 can ask the user for permission to access thier facebook account and which friends they have on facebook are already users
 of our service bracebook,now the user sign up they'll already see that some of their friends are already on bracebook*/
-/*How this works?*/
-/*On log in page,We can ask the user to sign in either manually - they dont get instant friends
+- How this works?*/
+- On log in page,We can ask the user to sign in either manually - they dont get instant friends
 Or we can ask them to sign in with facebook*/
-/*In this case we make a get request to fb asking them for this user's friends on facebook and fb would return with a
+- In this case we make a get request to fb asking them for this user's friends on facebook and fb would return with a
 post req with that list of users and emails to our server where we can compare this list against our database of users*/
-/*Then we can automatically add matched users as the friends of this new user*/
-/*Linkedin asks you to log in via google and it will look through all of your contacts on gmail in order to add them automatically
+- Then we can automatically add matched users as the friends of this new user*/
+- Linkedin asks you to log in via google and it will look through all of your contacts on gmail in order to add them automatically
 to linkedin */
-/*By using OAuth were able to access pieces of information on these third party websites such as their friends,emails or their
+- By using OAuth were able to access pieces of information on these third party websites such as their friends,emails or their
 contacts on gmail*/
 
-/*In our case we delegate the task of managing passwords securely to the companies like fb and google*/
-/*fb,google and so on also pepper the passwords,some companies also encrypt the entire database and have a wide array of complex
+- In our case we delegate the task of managing passwords securely to the companies like fb and google*/
+- fb,google and so on also pepper the passwords,some companies also encrypt the entire database and have a wide array of complex
 mathematical solutions to keep their user passwords under lock and key*/
-/*So we ask users to login to their facebook and fb tells us whether the user is genuine or not*/
-//Why OAuth?
-//1)Granular Access Levels --when they login to their fb account u can request some data back from it such as thier profile,thier frds list etc
-//2)Read/Read+Write access --u can request particular data ,u can also post to fb from ur website with read+write access
-//3)Revoke Access -- the user can go to fb and revoke the access that they given to ur website
+- So we ask users to login to their facebook and fb tells us whether the user is genuine or not*/
+- Why OAuth?
+1. Granular Access Level--when they login to their fb account u can request some data back from it such as thier profile,thier frds list etc
+1. Read/Read+Write access --u can request particular data ,u can also post to fb from ur website with read+write access
+1. Revoke Access -- the user can go to fb and revoke the access that they given to ur website
 
-//How this works
-/*Step 1
+How this works
+- Step 1
 Set up our app in their developer console and get an app id/client id*/
-/*Step 2
+- Step 2
 Redirect to Authenticate on that third party ex:fb,google */
-/*Step 3
+- Step 3
 User Logs in*/
-/*Step 4
+- Step 4
 User reviews the permissions that our website is asking for and Grants Permissions
 */
-/*Step 5
-Receive Authorisation code from facebook(Auth code)
-We can also exchange Auth code for an Access token from fb and we would save it in our database
+- Step 5
+- Receive Authorisation code from facebook(Auth code)
+- We can also exchange Auth code for an Access token from fb and we would save it in our database
 Access token lasts longer than auth code*/
 
-npm install passport-google-oauth20 //latest 2.0 implementation
+`npm install passport-google-oauth20` //latest 2.0 implementati- 
 
-//google developers console
-//New project>credentials
-//OAuth consent screen---->Scopes----->Test users-------->Summary
-//get a client id and a client secret
+- google developers console
+- New project>credentials
+- OAuth consent screen---->Scopes----->Test users-------->Summary
+- get a client id and a client secret
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 
-//paste this above all the routes code
+- paste this above all the routes code
+```js
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
@@ -2202,14 +2351,16 @@ app.get('/auth/google/secrets',
     // Successful authentication, redirect to secrets page.
     res.redirect('/secrets');
   });
+```
 
-//In userSchema we should have a googleId field
+- In userSchema we should have a googleId field
 
-//Bootstrap social buttons
+- Bootstrap social buttons
 https://lipis.github.io/bootstrap-social/
-//Download and extract>we need bootstrap-social.css file
+- Download and extract>we need bootstrap-social.css file
 
-//Lets finish our app
+- Lets finish our app
+```js
 /*Passport saves user details in req variable,we can access it using req.user*/
 app.post("/submit",function(req,res){
   const secret=req.body.secret;
@@ -2238,7 +2389,7 @@ app.get("/secrets",function(req,res){
     }
   })
 });
-
+```
 
 ### REACT JS NOTES
 ### 1
