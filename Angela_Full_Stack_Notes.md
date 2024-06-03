@@ -854,6 +854,7 @@ app.use(express.static("public"))
 - Create an api key
 - go to audience>settings to get a list //
 - They expect to send data in json format,for that we need to create a js object with key value pairs with keys that mailchimp recognize
+```js
 var data={
   members:[{
     email_address:email,
@@ -879,10 +880,11 @@ const request=https.request(url,options,function(response){
 
 request.write(jsonData); sends jsonData to mailchimps server
 request.end();
+```
+### 4
+### Adding Success and Failure Pages
 
-//4
-//Adding Success and Failure Pages
-
+```js
 if(response.statusCode===200){  //here the response is of https.request(url,options,function(response){})
   res.sendFile(__dirname+"/success.html")
 }else{
@@ -892,31 +894,32 @@ if(response.statusCode===200){  //here the response is of https.request(url,opti
 app.post("/failure",function(req,res){
   res.redirect("/");   //The post request of try again button to failure route is redirected to the home route
 })
+```
 
-//5
-//Deploying your server with Heroku
-//You can host 5 projects in heroku for free
-//Sign up for heroku
-//follow the step by step guide for nodejs
-//Once our project is uploaded on heroku ,their server choosed a dynamic port so we need to write
+### 5
+### Deploying your server with Heroku
+- You can host 5 projects in heroku for free
+- Sign up for heroku
+- follow the step by step guide for nodejs
+- Once our project is uploaded on heroku ,their server choosed a dynamic port so we need to write
 app.listen(process.env.PORT || 3000,function(){}) //Work both on heroku and on local system
-//We need to create a Procfile in our project folder with the code
+- We need to create a Procfile in our project folder with the code
 web: node app.js
 in it.
-//The next step is to save our work to git
-git init //it will initialize a brand new git repository
-git add . //add all files to current repository
-git commit -m "First commit" //commit the changes with a message
+- The next step is to save our work to git
+`git init` //it will initialize a brand new git repository
+`git add .` //add all files to current repository
+`git commit -m "First commit"` //commit the changes with a message
 
-//The next step is to deploy the app
+- The next step is to deploy the app
 heroku create
-git push heroku master //this will push our local version to heroku
-heroku logs //can see crash logs on terminal
+`git push heroku master` //this will push our local version to heroku
+`heroku logs` //can see crash logs on terminal
 
-//If we do any updates in our local file
-git add .
-git commit -m "Change success page h1"
-git push heroku master
+- If we do any updates in our local file
+`git add .`
+`git commit -m "Change success page h1"`
+`git push heroku master`
 
 
 ### COMMAND LINE NOTES
